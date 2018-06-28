@@ -2,7 +2,7 @@ import React from "react";
 import "./Jumbo.css";
 
 const Jumbo = () => (
-    <div>
+<div>
        <div class="jumbotron">
         <h1 class="display-4">mow-me</h1>
         <p class="lead">"uber for lawn care"</p>

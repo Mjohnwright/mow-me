@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Jumbo from "./components/Jumbo";
+import Register from "./components/Register";
 
 import "./App.css";
 
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
           < Jumbo />
+          < Register />
       </div>
     );
   }
