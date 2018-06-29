@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
-import Jumbo from "./components/Jumbo";
-import Register from "./components/Register";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Register from "./pages/Register";
+// import Nav from "./components/Nav";
+// import Form from "./components/Form";
 
 import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          < Jumbo />
-          < Register />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div>
+      {/* <Wrapper> */}
+        {/* <Route exact path="/" component={Home} /> */}
+        <Route exact path="/" component={Register} />
+        {/* <Route exact path="/discover" component={Jobs} /> */} */}
+      {/* </Wrapper> */}
+    </div>
+  </Router>
+);
 
 export default App;
