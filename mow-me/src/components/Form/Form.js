@@ -12,8 +12,8 @@ class Form extends Component {
     passwordConf: ""
   }
 
-  handleRegisterInputChange = () => {
-    const { name, value } = window.event.target.value;
+  handleRegisterInputChange = event => {
+    const { name, value } = event.target;
     // Updating the input's state
     this.setState({
       [name]: value
@@ -39,8 +39,8 @@ class Form extends Component {
   };
 
 
-  handleLogInInputChange = () => {
-    const { name, value } = window.event.target;
+  handleLogInInputChange = event => {
+    const { name, value } = event.target;
     // Updating the input's state
     this.setState({
       [name]: value
@@ -68,20 +68,21 @@ render() {
         <p>
           Hello {this.state.firstName} {this.state.lastName}
         </p>
+ 
+    <h3>Register Account</h3>
+
   <form className="ui form">
 
-  <h3>Register Account</h3>
-  
-  <div className="field">
+    <div className="field">
     <label>First Name</label>
-    <input type="text" 
+    <input type="text"
     value={this.state.firstName}
-    name="firstName" 
-    onChange={this.state.handleRegisterInputChange}
+    name="firstName"
+    onChange={this.handleRegisterInputChange}
     />
   </div>
-
-  <div className="field">
+ 
+   <div className="field">
     <label>Last Name</label>
     <input type="text"
     value={this.state.lastName}
@@ -90,7 +91,7 @@ render() {
     />
   </div>
 
-  <div className="inline fields">
+  <div className="field">
     <label>Phone Number</label>
     <div className="field">
       <input type="text"
@@ -108,7 +109,6 @@ render() {
     value={this.state.email}
     name="email"
     onChange={this.handleRegisterInputChange}
-    placeholder="joe@schmoe.com"
     />
   </div>
 
@@ -117,7 +117,6 @@ render() {
     <input type="text"
     value={this.state.userName}
     name="userName"
-    placeholder="User Name"
     onChange={this.handleRegisterInputChange}
     />
   </div>
@@ -127,7 +126,6 @@ render() {
     <input type="text"
     value={this.state.password}
     name="password"
-    placeholder="Password"
     onChange={this.handleRegisterInputChange}
     />
   </div>
@@ -137,7 +135,6 @@ render() {
     <input type="text"
     value={this.state.passwordConf}
     name="passwordConf"
-    placeholder="Confirm Password"
     onChange={this.handleRegisterInputChange}
     />
   </div>
@@ -148,31 +145,27 @@ render() {
       onClick={this.handleFormRegisterSubmit}>Submit</button>
   </div>
 
-</form>
-
-
-
-<form className="ui form">
+  </form>
 
   <h3>Sign In to Your Account</h3>
 
-  <div className="field">
+  <form className="ui form">
+
+    <div className="field">
     <label>User Name</label>
     <input type="text"
-     name="userName"
-     value={this.state.userName}
-     placeholder="User Name"
-     onChange = {this.state.handleLogInInputChange}
-     />
+    value={this.state.userName}
+    name="userName"
+    onChange={this.handleRegisterInputChange}
+    />
   </div>
 
-  <div className="field">
+    <div className="field">
     <label>Password</label>
-    <input type="text" 
-    name="first-name"
+    <input type="text"
     value={this.state.password}
-    placeholder="Password"
-    onChange = {this.state.handleLogInInputChange}
+    name="password"
+    onChange={this.handleRegisterInputChange}
     />
   </div>
 
@@ -185,7 +178,6 @@ render() {
   </form>
   </div>
   );
-
   }
 };
 
