@@ -12,6 +12,8 @@ class Form extends Component {
     passwordConf: ""
   }
 
+
+
   handleRegisterInputChange = event => {
     const { name, value } = event.target;
     // Updating the input's state
@@ -23,7 +25,6 @@ class Form extends Component {
   handleFormRegisterSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-
     alert(`Hello ${this.state.firstName} ${this.state.lastName} the form is submitted.`);
     
     //I GUESS THIS IS WHERE THE DB STUFF WILL GO.
@@ -38,14 +39,33 @@ class Form extends Component {
     });
   };
 
-
-  handleLogInInputChange = event => {
+    handleLogInInputChange = event => {
     const { name, value } = event.target;
+    
+
     // Updating the input's state
     this.setState({
       [name]: value
     });
   };
+
+  validateLogIn = event => {
+    console.log("validate is fired");
+     if( this.state.userName.value === "" )
+     {
+        alert( "Please provide your UserName" );
+        document.myForm.Name.focus() ;
+        return false;
+     }
+     
+     if(this.state.email.value === "" )
+     {
+        alert( "Please provide your Email!" );
+        document.myForm.EMail.focus() ;
+        return false;
+     }
+     this.handleLLoginFormSubmit();
+  }
 
   handleLLoginFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
@@ -66,12 +86,12 @@ render() {
 
   <div>
         <p>
-          Hello {this.state.firstName} {this.state.lastName}
+          {/* Hello {this.state.firstName} {this.state.lastName} */}
         </p>
  
-    <h3>Register Account</h3>
+  <h3>Register Account</h3>
 
-  <form className="ui form">
+  <form className="register-form">
 
     <div className="field">
     <label>First Name</label>
@@ -108,6 +128,7 @@ render() {
     <input type="email"
     value={this.state.email}
     name="email"
+    validate={this.validateEmail}
     onChange={this.handleRegisterInputChange}
     />
   </div>
@@ -142,14 +163,14 @@ render() {
   <div className="field">
       <button className="ui button" 
       type="submit" 
-      onClick={this.handleFormRegisterSubmit}>Submit</button>
+      onSubmit={this.handleFormRegisterSubmit}>Submit</button>
   </div>
 
   </form>
 
   <h3>Sign In to Your Account</h3>
 
-  <form className="ui form">
+  <form className="login-form" name="login">
 
     <div className="field">
     <label>User Name</label>
@@ -172,7 +193,7 @@ render() {
     <div className="field">
     <button className="ui button" 
     type="submit" 
-    onClick={this.handleLLoginFormSubmit}>Submit</button>
+    onSubmit={this.validateLogIn}>Submit</button>
     </div>
 
   </form>
