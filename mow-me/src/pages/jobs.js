@@ -1,15 +1,17 @@
 import React from "react";
 import Nav from "../components/Nav";
+import AllJobs from "../components/AllJobs";
 
-const Home  = () => (
+const Jobs  = () => (
 <div>
     
     
     < Nav />
+    < AllJobs />
     
 
 
 </div>
 );
 
-export default Home;
+export default Jobs;
