@@ -7,6 +7,7 @@ const Nav = props => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light"> 
   <a className="navbar-brand" >MowMe</a>
   
+<<<<<<< HEAD
   {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button> */}
@@ -29,6 +30,17 @@ const Nav = props => (
     </li>
     </ul>
       
+=======
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+
+  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div className="navbar-nav">
+      <a className="nav-item nav-link active" href="">Home <span className="sr-only">(current)</span></a>
+      <a className="nav-item nav-link" onClick={this.handleFormRegisterSubmit} href="">Log In</a>
+      <a className="nav-item nav-link" href="">Register</a>
+>>>>>>> master
     </div>
   </div>
   
@@ -36,6 +48,9 @@ const Nav = props => (
   </div>
 );
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
 export default Nav;
