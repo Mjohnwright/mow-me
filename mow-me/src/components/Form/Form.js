@@ -13,8 +13,7 @@ class Form extends Component {
   }
 
 
-
-  handleRegisterInputChange = event => {
+ handleRegisterInputChange = event => {
     const { name, value } = event.target;
     // Updating the input's state
     this.setState({
@@ -50,18 +49,18 @@ class Form extends Component {
   };
 
   validateLogIn = event => {
+    event.preventDefault();
     console.log("validate is fired");
-     if( this.state.userName.value === "" )
+     if( this.state.userName === "" )
      {
         alert( "Please provide your UserName" );
-        document.myForm.Name.focus() ;
+        // document.myForm.Name.focus() ;
         return false;
      }
-     
-     if(this.state.email.value === "" )
+      else if (this.state.password === "" )
      {
-        alert( "Please provide your Email!" );
-        document.myForm.EMail.focus() ;
+        alert( "Please provide your Password!" );
+        // document.myForm.email.focus() ;
         return false;
      }
      this.handleLLoginFormSubmit();
@@ -69,8 +68,6 @@ class Form extends Component {
 
   handleLLoginFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-
     alert(`Hello ${this.state.userName} your login is is submitted.`);
     
     //I GUESS THIS IS WHERE THE DB STUFF WILL GO.  
@@ -193,7 +190,7 @@ render() {
     <div className="field">
     <button className="ui button" 
     type="submit" 
-    onSubmit={this.validateLogIn}>Submit</button>
+    onClick={this.validateLogIn}>Submit</button>
     </div>
 
   </form>
