@@ -13,9 +13,9 @@ const Nav = props => (
 
   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav">
-      <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
-      <a className="nav-item nav-link" onClick={this.handleFormRegisterSubmit} href="#">Log In</a>
-      <a className="nav-item nav-link" href="#">Register</a>
+      <a className="nav-item nav-link active" href="">Home <span className="sr-only">(current)</span></a>
+      <a className="nav-item nav-link" onClick={this.handleFormRegisterSubmit} href="">Log In</a>
+      <a className="nav-item nav-link" href="">Register</a>
     </div>
   </div>
   
