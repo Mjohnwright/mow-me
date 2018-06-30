@@ -12,6 +12,9 @@ class Form extends Component {
     passwordConf: ""
   }
 
+  // *********************************************************************************
+  //                                 REGISTER
+  // *********************************************************************************
 
  handleRegisterInputChange = event => {
     const { name, value } = event.target;
@@ -21,9 +24,52 @@ class Form extends Component {
     });
   };
 
-  handleFormRegisterSubmit = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
+  ValidateRegister = event => {
+   // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+    console.log("validate Register is fired");
+    // Set of conditions to validate a New User's data
+     if( this.state.firstName === "") {
+        alert( "Please provide your First Name" );
+        return false;
+     }
+      else if (this.state.lastName === "" )
+     {
+        alert( "Please provide your Last Name" );
+        return false;
+     }
+     else if (this.state.phone === "" )
+     {
+        alert( "Please provide your Phone Number" );
+        return false;
+     }
+     else if (this.state.email === "" )
+     {
+        alert( "Please provide your E-mail address" );
+        return false;
+     }
+     else if (this.state.userName === "" )
+     {
+        alert( "Please choose a User Name" );
+        return false;
+     }
+     else if (this.state.password === "" )
+     {
+        alert( "Please choose a password" );
+        return false;
+     }
+     else if (this.state.passwordConf === "" )
+     {
+        alert( "Please type your password again" );
+        return false;
+     }
+     this.handleFormRegisterSubmit(event);
+  }
+
+  
+
+  handleFormRegisterSubmit = event => {
+    //fires the register function to pass the data to the database
     alert(`Hello ${this.state.firstName} ${this.state.lastName} the form is submitted.`);
     
     //I GUESS THIS IS WHERE THE DB STUFF WILL GO.
@@ -41,14 +87,19 @@ class Form extends Component {
     handleLogInInputChange = event => {
     const { name, value } = event.target;
     
-
     // Updating the input's state
     this.setState({
       [name]: value
     });
   };
 
+
+  // *********************************************************************************
+  //                                   LOGIN
+  // *********************************************************************************
+
   validateLogIn = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     console.log("validate is fired");
      if( this.state.userName === "" )
@@ -66,6 +117,8 @@ class Form extends Component {
      this.handleLLoginFormSubmit();
   }
 
+
+
   handleLLoginFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     alert(`Hello ${this.state.userName} your login is is submitted.`);
@@ -78,17 +131,20 @@ class Form extends Component {
     });
   };
 
+
+
 render() {
     return (
-
   <div>
-        <p>
-          {/* Hello {this.state.firstName} {this.state.lastName} */}
-        </p>
- 
-  <h3>Register Account</h3>
+
+  {/* *************************************** */}
+              {/* REGISTER  */}
+{/* *************************************** */}
 
   <form className="register-form">
+
+    <h3>Register Account</h3>
+
 
     <div className="field">
     <label>First Name</label>
@@ -160,14 +216,17 @@ render() {
   <div className="field">
       <button className="ui button" 
       type="submit" 
-      onSubmit={this.handleFormRegisterSubmit}>Submit</button>
+      onClick={this.ValidateRegister}>Submit</button>
   </div>
 
   </form>
 
-  <h3>Sign In to Your Account</h3>
-
+{/* *************************************** */}
+              {/* SIGN IN  */}
+{/* *************************************** */}
   <form className="login-form" name="login">
+  
+  <h3>Sign In to Your Account</h3>
 
     <div className="field">
     <label>User Name</label>
