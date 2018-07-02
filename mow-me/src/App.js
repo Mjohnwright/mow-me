@@ -4,6 +4,7 @@ import Jobs from "./pages/Jobs";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import AddJob from "./pages/AddJob";
 import "./App.css";
 
 const App = () => (
@@ -14,6 +15,8 @@ const App = () => (
         <Route exact path="/login" component={Register} /> 
         <Route exact path="/jobboard" component={Jobs} />
         <Route exact path="/about" component={About} /> 
+        <Route exact path="/createjob" component={AddJob} /> 
+
      </div>
   </Router>
 );
