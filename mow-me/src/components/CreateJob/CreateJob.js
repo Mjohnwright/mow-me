@@ -68,9 +68,22 @@ console.log("validate Register is fired");
   }
 
 handleCreateJobSubmit (event) {
+   //fires the register function to pass the data to the database
+   alert(`Hello ${this.state.userName} job is listed for  ${this.state.price}`);
+    
+   //I GUESS THIS IS WHERE THE DB STUFF WILL GO.
+   this.setState({
+     firstName: "",
+     lastName: "",
+     phone: "",
+     email: "",
+     userName: "",
+     password: "",
+     passwordConf: ""
+   });
+ };
 
 
-}
 
   render() {
     return (
