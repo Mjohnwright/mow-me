@@ -14,7 +14,7 @@ const About  = () => (
         <Container style={{ marginTop: 30 }}>
       <Row>
         <Col size="md-12">
-          <h1>Welcome To MowMe!</h1>
+          <h1><center>Meet the Team</center></h1>
         </Col>
       </Row>
       <Row>
