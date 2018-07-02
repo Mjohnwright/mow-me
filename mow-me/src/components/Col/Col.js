@@ -5,4 +5,6 @@ const Col = props => {
   return <div className={size} {...props} />;
 };
 
+
 export default Col;
+
