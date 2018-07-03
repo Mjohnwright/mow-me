@@ -70,6 +70,8 @@ class Form extends Component {
   
 
   handleFormRegisterSubmit = event => {
+    console.log("POST Register is fired");
+
     //fires the register function to pass the data to the database
     // alert(`Hello ${this.state.firstName} ${this.state.lastName} the form is submitted.`);
     // Make a request for a user with a given ID
