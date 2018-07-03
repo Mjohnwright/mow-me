@@ -10,6 +10,14 @@ const jobsSchema = new Schema({
   price: { type: String, required: true },
   dateNeededBy: { type: Date, default: Date.now },
   jobChosen:{ type: Boolean, required: false, default:false },
+  user: [
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the Note model
+      ref: "User"
+    }
+  ]
 });
 
 const Jobs = mongoose.model("Jobs", jobsSchema);

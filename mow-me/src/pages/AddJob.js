@@ -1,16 +1,18 @@
 import React from "react";
-import Form from "../components/Form";
+import CreateJob from "../components/CreateJob";
 import Nav from "../components/Nav";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 
-const Register  = () => (
+
+const AddJob  = () => (
+<div>
     
-    <div>
-        <Nav />
-        <Container style={{ marginTop: 30 }}>
-      <Row>
+    
+    < Nav />
+    <Container style={{ marginTop: 30 }}>
+    <Row>
         <Col size="md-12">
           <h1>Welcome To MowMe!</h1>
         </Col>
@@ -18,14 +20,16 @@ const Register  = () => (
       <Row>
         <Col size="md-12">
           
-            <Form />
+        < CreateJob />
           
         </Col>
       </Row>
     </Container>
-    
-    </div>
-    
-    );
 
-export default Register;
+    
+
+
+</div>
+);
+
+export default AddJob;
