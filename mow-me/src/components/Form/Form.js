@@ -72,6 +72,15 @@ class Form extends Component {
     //fires the register function to pass the data to the database
     alert(`Hello ${this.state.firstName} ${this.state.lastName} the form is submitted.`);
     
+    $.ajax({
+      method: "POST",
+      url: "/scrape",
+    }).done(function (data) {
+      console.log(data)
+      window.location = "/"
+    })
+  });
+
     //I GUESS THIS IS WHERE THE DB STUFF WILL GO.
     this.setState({
       firstName: "",
