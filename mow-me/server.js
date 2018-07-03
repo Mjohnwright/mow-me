@@ -39,7 +39,7 @@ mongoose.Promise = global.Promise;
 
 const userSeed = [
   {
-    firstName: "mike",
+    firstName: "mikess",
     lastName: "guy",
     phone:2151234567,
      email: "mikeguy@gmail.com",
@@ -48,8 +48,8 @@ const userSeed = [
      dateJoined: new Date(Date.now())
   },
   {
-    firstName: "first",
-    lastName: "last",
+    firstName: "firsttt",
+    lastName: "lasttt",
     phone:2151234568,
      email: "second@gmail.com",
      username:"seconduser",
