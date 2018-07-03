@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Form.css";
+import axios from 'axios';
 
 class Form extends Component {
   state = {
@@ -70,28 +71,35 @@ class Form extends Component {
 
   handleFormRegisterSubmit = event => {
     //fires the register function to pass the data to the database
-    alert(`Hello ${this.state.firstName} ${this.state.lastName} the form is submitted.`);
-    
-    $.ajax({
-      method: "POST",
-      url: "/scrape",
-    }).done(function (data) {
-      console.log(data)
-      window.location = "/"
-    })
-  });
+    // alert(`Hello ${this.state.firstName} ${this.state.lastName} the form is submitted.`);
+    // Make a request for a user with a given ID
+      axios.post('/newUser',
+       {params: {
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          phone: this.state.phone,
+          email: this.state.email,
+          username: this.state.userName,
+          password: this.state.password,
+          dateJoined: new Date(Date.now())
+          } 
+        })
+      
+        .then(res => {
+        console.log(res);
+        console.log(res.data);
+        })
 
-    //I GUESS THIS IS WHERE THE DB STUFF WILL GO.
-    this.setState({
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      userName: "",
-      password: "",
-      passwordConf: ""
-    });
-  };
+        this.setState({
+              firstName: "",
+              lastName: "",
+              phone: "",
+              email: "",
+              userName: "",
+              password: "",
+              passwordConf: ""
+            }); 
+        };
 
     handleLogInInputChange = event => {
     const { name, value } = event.target;
