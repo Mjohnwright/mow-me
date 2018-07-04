@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./CreateJob.css";
+import axios from 'axios';
 
 class CreateJob extends Component {
   state = {
@@ -10,7 +11,6 @@ class CreateJob extends Component {
     zip: "",
     price: "",
     cutDate: "",
-    acceptJob: "",
   }
 
   handleCreateJobInInputChange = event => {
@@ -68,21 +68,35 @@ console.log("validate Register is fired");
   }
 
 handleCreateJobSubmit (event) {
+  console.log("POST is fired");
    //fires the register function to pass the data to the database
-   alert(`Hello ${this.state.userName} job is listed for  ${this.state.price}`);
-    
-   //I GUESS THIS IS WHERE THE DB STUFF WILL GO.
-   this.setState({
-     firstName: "",
-     lastName: "",
-     phone: "",
-     email: "",
-     userName: "",
-     password: "",
-     passwordConf: ""
-   });
- };
-
+  //  alert(`Hello ${this.state.userName} job is listed for  ${this.state.price}`);
+   axios.post('/api/newJob',
+   {params: {
+      username: this.state.userName,
+      streetAddress: this.state.streetAddress,
+      city: this.state.city,
+      state: this.state.state,
+      zip: this.state.zip,
+      price: this.state.price,
+      cutDate: this.state.cutDate
+      } 
+    })
+    .then(res => {
+    console.log(res);
+    console.log(res.data);
+      
+      this.setState({
+        userName: "",
+        streetAddress: "",
+        city: "",
+        state: "",
+        zip: "",
+        price: "",
+        cutDate: "",
+      }); 
+    })
+};
 
 
   render() {

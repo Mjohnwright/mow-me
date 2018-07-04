@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Form.css";
 import axios from 'axios';
 
+
 class Form extends Component {
   state = {
     firstName: "",
@@ -75,7 +76,7 @@ class Form extends Component {
     //fires the register function to pass the data to the database
     // alert(`Hello ${this.state.firstName} ${this.state.lastName} the form is submitted.`);
     // Make a request for a user with a given ID
-      axios.post('/newUser',
+      axios.post("/api/newUser",
        {params: {
           firstName: this.state.firstName,
           lastName: this.state.lastName,
@@ -86,22 +87,21 @@ class Form extends Component {
           dateJoined: new Date(Date.now())
           } 
         })
-      
         .then(res => {
         console.log(res);
         console.log(res.data);
+          
+          this.setState({
+            firstName: "",
+            lastName: "",
+            phone: "",
+            email: "",
+            userName: "",
+            password: "",
+            passwordConf: ""
+          }); 
         })
-
-        this.setState({
-              firstName: "",
-              lastName: "",
-              phone: "",
-              email: "",
-              userName: "",
-              password: "",
-              passwordConf: ""
-            }); 
-        };
+  };
 
     handleLogInInputChange = event => {
     const { name, value } = event.target;

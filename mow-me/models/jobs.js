@@ -9,7 +9,7 @@ const jobsSchema = new Schema({
   zipCode: { type: String, required: true },
   price: { type: String, required: true },
   dateNeededBy: { type: Date, default: Date.now },
-  jobChosen:{ type: Boolean, required: false, default:false },
+  // jobChosen:{ type: Boolean, required: false, default:false },
   user: [
     {
       // Store ObjectIds in the array

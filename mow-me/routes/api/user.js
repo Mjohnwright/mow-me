@@ -1,37 +1,17 @@
 const router = require("express").Router();
 const jobsController = require("../../controllers/usersController");
 
-// Matches with "/api/books"
-router.route("/")
-  .get(usersController.findAll)
+
+// Matches with "/api/newUser"
+router.route("/api/newUser")
   .post(usersController.create);
 
 // Matches with "/api/books/:id"
-router
-  .route("/:id")
-  .get(usersController.findById)
-  .put(usersController.update)
-  .delete(usersController.remove);
+// router
+//   .route("/:id")
+//   .get(usersController.findById)
+//   .put(usersController.update)
+//   .delete(usersController.remove);
 
 module.exports = router;
 
-import axios from "axios";
-
-export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
-  },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
-  },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
-  },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
-  }
-};
