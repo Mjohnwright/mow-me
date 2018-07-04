@@ -7,6 +7,8 @@ import About from "./pages/About";
 import AddJob from "./pages/AddJob";
 import "./App.css";
 
+
+
 const App = () => (
   <Router>
     <div>
