@@ -1,0 +1,21 @@
+{
+  "name": "mow-me-dirk",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.2.1",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
+}
