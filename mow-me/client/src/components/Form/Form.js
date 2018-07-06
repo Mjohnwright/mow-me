@@ -90,6 +90,7 @@ class Form extends Component {
         .then(res => {
         console.log(res);
         console.log(res.data);
+
           
           this.setState({
             firstName: "",
@@ -100,6 +101,8 @@ class Form extends Component {
             password: "",
             passwordConf: ""
           }); 
+
+          res.redirect('/')
         })
   };
 
