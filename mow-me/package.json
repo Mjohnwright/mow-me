@@ -1,5 +1,5 @@
 {
-  "name": "mow-me-dirk",
+  "name": "mow-me",
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && yarn start",
