@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const jobsController = require("../../controllers/usersController");
+const usersController = require("../../controllers/usersController");
 
 
 // Matches with "/api/newUser"
