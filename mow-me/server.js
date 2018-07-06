@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const logger = require('morgan')
 const routes = require("./client/routes/api");
 const port = process.env.PORT || 3001;
-
+ 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
