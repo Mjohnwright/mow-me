@@ -17,6 +17,7 @@
     "morgan": "^1.9.0"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.17.5"
   }
 }

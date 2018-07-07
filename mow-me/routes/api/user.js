@@ -27,8 +27,15 @@ const usersController = require("../../controllers/usersController");
 
 // Matches with "/api/users"
 router.route("/user")
-    .post(usersController.create);
-
+    .post(usersController.create)
+    .get(usersController.findById)
+    .put(usersController.update)
+    .delete(usersController.remove)
+.route("/login")
+    .post(usersController.create)
+    .get(usersController.findById)
+    .put(usersController.update)
+    .delete(usersController.remove);
 
 module.exports = router;
 
