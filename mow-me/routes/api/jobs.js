@@ -7,13 +7,16 @@ router.route("/api/newJob")
 
 // Matches with "/api/books/:id"
 // router
-  .route("/:id")
-  .get(jobsController.findById)
-  .put(jobsController.update)
-  .delete(jobsController.remove)
-  .route("/updateJobs")
-  .get(jobsController.findById)
-  .put(jobsController.update)
-  .delete(jobsController.remove);
+  router.get("/:id", jobsController.findById)
+  router.put("/:id", jobsController.update)
+  router.delete("/:id", jobsController.remove)
+ 
+  // router.put(jobsController.findById)
+  // .put(jobsController.update)
+  // .delete(jobsController.remove)
+  // router.route("/updateJobs")
+  // .get(jobsController.findById)
+  // .put(jobsController.update)
+  // .delete(jobsController.remove);
 
 module.exports = router;
