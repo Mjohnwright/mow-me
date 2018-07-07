@@ -1,8 +1,8 @@
-import React from "react";
-import "./AboutUs.css";
+// import React from "react";
+// import "./AboutUs.css";
 
 const AboutUs = () => ( 
-<div className="container">
+{/* <div className="container">
   <div className="at-grid" data-column="6">
     <div className="at-column">
       <div className="at-user">
@@ -87,7 +87,7 @@ const AboutUs = () => (
     </div>
   
   </div>
-</div>
+</div> */}
 );
 
-export default AboutUs;
+// export default AboutUs;
