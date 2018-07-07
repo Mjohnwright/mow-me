@@ -3,13 +3,17 @@ const jobsController = require("../../controllers/jobsController");
 
 // Matches with "/api/books"
 router.route("/api/newJob")
-  .post(jobsController.create);
+  .post(jobsController.create)
 
 // Matches with "/api/books/:id"
 // router
-//   .route("/:id")
-//   .get(jobsController.findById)
-//   .put(jobsController.update)
-//   .delete(jobsController.remove);
+  .route("/:id")
+  .get(jobsController.findById)
+  .put(jobsController.update)
+  .delete(jobsController.remove)
+  .route("/updateJobs")
+  .get(jobsController.findById)
+  .put(jobsController.update)
+  .delete(jobsController.remove);
 
 module.exports = router;
