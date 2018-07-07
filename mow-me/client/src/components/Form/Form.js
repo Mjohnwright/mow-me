@@ -58,24 +58,27 @@ class Form extends Component {
   handleFormRegisterSubmit = event => {
     console.log("POST Register is fired");
 
-    axios.post('/user/', {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      phone: this.state.phone,
-      email: this.state.email,
-      username: this.state.userName,
-      password: this.state.password,
-      passwordConf: this.state.passwordConf,
-      dateJoined: new Date(Date.now())
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    axios
+      .post('/user/', {
+        body: {
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          phone: this.state.phone,
+          email: this.state.email,
+          username: this.state.userName,
+          password: this.state.password,
+          passwordConf: this.state.passwordConf,
+          dateJoined: new Date(Date.now())
+        }
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
 
-        this.setState({
+    this.setState({
       firstName: "",
       lastName: "",
       phone: "",
