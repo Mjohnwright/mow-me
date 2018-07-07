@@ -124,7 +124,22 @@ class Form extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     alert(`Hello ${this.state.userName} your login is is submitted.`);
 
-    //I GUESS THIS IS WHERE THE DB STUFF WILL GO.
+    axios
+      .post('/user/', {
+        body: {
+          username: this.state.userName,
+          password: this.state.password,
+
+        }
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+
     this.setState({
       userName: "",
       password: ""
