@@ -29,6 +29,9 @@ const usersController = require("../../controllers/usersController");
 router.route("/user")
     .post(usersController.create);
 
+router.route("/login")
+    .post(users.usersController.create);
+
 
 module.exports = router;
 
