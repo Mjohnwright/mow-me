@@ -6,7 +6,7 @@ router.route("/")
   .post(jobsController.create)
   .get(jobsController.findAll)
 
-  // Matches with "/api/user/:id"
+// Matches with "/api/user/:id"
 router
   .route("/:id")
   .get(jobsController.findById)
@@ -14,3 +14,4 @@ router
   .delete(jobsController.remove);
   
 module.exports = router;
+

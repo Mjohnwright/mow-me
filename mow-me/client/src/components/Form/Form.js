@@ -58,7 +58,7 @@ class Form extends Component {
   handleFormRegisterSubmit = event => {
     console.log("POST Register is fired");
 
-    axios
+    axio
       .post("/api/user/", {
         body: {
           firstName: this.state.firstName,
