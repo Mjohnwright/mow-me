@@ -5,6 +5,6 @@ const userRoutes = require("./user");
 // job routes
 router.use("/jobs", jobRoutes);
 // user routes
-router.use("/", userRoutes);
+router.use("/user", userRoutes);
 
 module.exports = router;
