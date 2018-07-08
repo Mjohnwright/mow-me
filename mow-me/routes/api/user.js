@@ -31,7 +31,7 @@ router.route("/user")
     .post(usersController.create);
 
 router.route("/login")
-    .post(users.usersController.create);
+    // .post(users.usersController.create);
     .post(usersController.create)
     .get(usersController.findById)
     .put(usersController.update)
