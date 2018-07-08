@@ -31,7 +31,7 @@ module.exports = {
   update: function(req, res) {
     db.Article
       .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbArticle => res.json(dbModel))
+      .then(dbArticle => res.json(dbArticle))
       .catch(err => res.status(422).json(err));
-  },
+  }
 };
