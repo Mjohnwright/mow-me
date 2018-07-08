@@ -43,4 +43,3 @@ router.route("/login")
     .delete(usersController.remove);
 
 module.exports = router;
-
