@@ -23,14 +23,3 @@ const jobsSchema = new Schema({
 const Jobs = mongoose.model("Jobs", jobsSchema);
 
 module.exports = Jobs;
-
-
-/*•	UserName
-•	Street address
-•	City
-•	State
-•	Zip Code
-•	Price
-•	Needs to be completed by date
-•	I want this job 
-*/

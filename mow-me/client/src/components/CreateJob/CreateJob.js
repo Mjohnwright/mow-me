@@ -4,13 +4,14 @@ import axios from "axios";
 
 class CreateJob extends Component {
   state = {
-    userName: "",
+    username: "",
     streetAddress: "",
     city: "",
     state: "",
     zipCode: "",
     price: "",
-    dateNeededBy: ""
+    dateNeededBy: "",
+    jobChosen: false
   };
 
   handleCreateJobInInputChange = event => {
@@ -27,7 +28,7 @@ class CreateJob extends Component {
     event.preventDefault();
     console.log("validate Register is fired");
     // Set of conditions to validate a New User's data
-    if (this.state.userName === "") {
+    if (this.state.username === "") {
       alert("Please provide your User Name");
       return false;
     } else if (this.state.streetAddress === "") {
@@ -59,13 +60,14 @@ class CreateJob extends Component {
     axios
       .post("/api/jobs/", {
         body: {
-          username: this.state.userName,
+          username: this.state.username,
           streetAddress: this.state.streetAddress,
           city: this.state.city,
           state: this.state.state,
           zipCode: this.state.zipCode,
           price: this.state.price,
-          dateNeededBy: this.state.dateNeededBy
+          dateNeededBy: this.state.dateNeededBy,
+          jobChosen: this.state.jobChosen
         }
       })
       .then(function(response) {
@@ -76,7 +78,7 @@ class CreateJob extends Component {
       });
 
     this.setState({
-      userName: "",
+      username: "",
       streetAddress: "",
       city: "",
       state: "",
@@ -98,8 +100,8 @@ class CreateJob extends Component {
             <label>User Name</label>
             <input
               type="text"
-              value={this.state.userName}
-              name="userName"
+              value={this.state.username}
+              name="username"
               onChange={this.handleCreateJobInInputChange}
             />
           </div>
