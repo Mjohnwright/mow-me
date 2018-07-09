@@ -125,11 +125,10 @@ class Form extends Component {
     alert(`Hello ${this.state.userName} your login is is submitted.`);
 
     axios
-      .post('/user/', {
+      .post("/user/", {
         body: {
           username: this.state.userName,
-          password: this.state.password,
-
+          password: this.state.password
         }
       })
       .then(function(response) {
@@ -138,7 +137,6 @@ class Form extends Component {
       .catch(function(error) {
         console.log(error);
       });
-
 
     this.setState({
       userName: "",
