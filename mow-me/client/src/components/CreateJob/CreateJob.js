@@ -8,9 +8,9 @@ class CreateJob extends Component {
     streetAddress: "",
     city: "",
     state: "",
-    zip: "",
+    zipCode: "",
     price: "",
-    cutDate: "",
+    dateNeededBy: "",
   }
 
   handleCreateJobInInputChange = event => {
@@ -46,7 +46,7 @@ console.log("validate Register is fired");
     alert( "Please provide your state" );
     return false;
  }
- else if (this.state.zip === "" )
+ else if (this.state.zipCode === "" )
  {
     alert( "Please provide your zip code" );
     return false;
@@ -57,7 +57,7 @@ console.log("validate Register is fired");
     alert( "Please select your price" );
     return false;
  }
- else if (this.state.cutDate === "" )
+ else if (this.state.dateNeededBy === "" )
  {
     alert( "Please select a date" );
     return false;
@@ -71,33 +71,36 @@ handleCreateJobSubmit (event) {
   console.log("POST is fired");
    //fires the register function to pass the data to the database
   //  alert(`Hello ${this.state.userName} job is listed for  ${this.state.price}`);
-   axios.post('/api/newJob',
-   {params: {
+   axios.post("/api/jobs/", {
+   body: {
       username: this.state.userName,
       streetAddress: this.state.streetAddress,
       city: this.state.city,
       state: this.state.state,
-      zip: this.state.zip,
+      zipCode: this.state.zipCode,
       price: this.state.price,
-      cutDate: this.state.cutDate
+      dateNeededBy: this.state.dateNeededBy
       } 
     })
-    .then(res => {
-    console.log(res);
-    console.log(res.data);
+    .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
       
       this.setState({
         userName: "",
         streetAddress: "",
         city: "",
         state: "",
-        zip: "",
+        zipCode: "",
         price: "",
-        cutDate: "",
+        dateNeededBy: "",
       }); 
-    })
+    
 };
-
 
   render() {
     return (
@@ -149,10 +152,10 @@ handleCreateJobSubmit (event) {
   </div>
 
   <div className="field">
-    <label>Zip</label>
+    <label>Zip Code</label>
     <input type="text"
-    value={this.state.zip}
-    name="zip"
+    value={this.state.zipCode}
+    name="zipCode"
     onChange={this.handleCreateJobInInputChange}
     />
   </div>
@@ -168,9 +171,9 @@ handleCreateJobSubmit (event) {
 
   <div className="field">
     <label>Cut Date</label>
-    <input type="text"
-    value={this.state.cutDate}
-    name="cutDate"
+    <input type="date"
+    value={this.state.dateNeededBy}
+    name="dateNeededBy"
     onChange={this.handleCreateJobInInputChange}
     />
   </div>
