@@ -1,6 +1,8 @@
 {
   "name": "mow-me",
   "version": "1.0.0",
+  "author": "Matthew Wright",
+  "license": "MIT",
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
@@ -14,7 +16,19 @@
     "axios": "^0.18.0",
     "express": "^4.16.2",
     "mongoose": "^5.2.1",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
