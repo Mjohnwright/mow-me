@@ -2,8 +2,9 @@ const router = require("express").Router();
 const usersController = require("../../controllers/usersController");
 
 // Matches with "/api/users"
-router.route("/")
-    .post(usersController.create);
+router
+  .route("/")
+  .post(usersController.create);
 
 // Matches with "/api/user/:id"
 router
@@ -13,4 +14,3 @@ router
   .delete(usersController.remove);
 
 module.exports = router;
-

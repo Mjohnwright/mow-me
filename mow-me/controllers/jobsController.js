@@ -2,13 +2,6 @@ const db = require("../models");
 
 // Defining methods for the jobsController
 module.exports = {
-  findAll: function(req, res) {
-    db.Jobs
-      .find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
   findById: function(req, res) {
     db.Jobs
       .findById(req.params.id)
@@ -21,12 +14,6 @@ module.exports = {
       .create(req.body.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-    },
-  update: function(req, res) {
-    db.Jobs
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
     db.Jobs
@@ -35,10 +22,18 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findAll: function(req, res) {
+    db.Jobs
+      .find(req.query)
+      .find({})
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   update: function(req, res) {
-    db.Article
+    db.Jobs
       .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbArticle => res.json(dbArticle))
+      .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
 };
