@@ -10,7 +10,7 @@ module.exports = {
   },
   create: function(req, res) {
     console.log("req body is arrived: " + JSON.stringify(req.body.body));
-    db.Users
+    db.Jobs
       .create(req.body.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
