@@ -27,11 +27,11 @@ const Nav = props => (
     <li className={window.location.pathname === "/jobboard" ? "active" : ""}>
     <Link to="/jobboard">Job Board</Link>
     </li>
-    <li className={window.location.pathname === "/register" ? "active" : ""}>
-    <Link to="/register">Register</Link>
+    <li className={window.location.pathname === "/users/register" ? "active" : ""}>
+    <Link to="/users/register">Register</Link>
     </li>
-    <li className={window.location.pathname === "/login" ? "active" : ""}>
-    <Link to="/login">Login</Link>
+    <li className={window.location.pathname === "/users/login" ? "active" : ""}>
+    <Link to="/users/login">Login</Link>
     </li>
 
     </ul>
