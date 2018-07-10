@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./Form.css";
+import "./RegisterForm.css";
 import axios from "axios";
 
-class Form extends Component {
+class RegisterForm extends Component {
   state = {
     firstName: "",
     lastName: "",
@@ -195,4 +195,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default RegisterForm;

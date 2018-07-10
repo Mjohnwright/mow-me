@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../../components/Form";
+import RegisterForm from "../../components/RegisterForm";
 import Nav from "../../components/Nav";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
@@ -18,7 +18,7 @@ const Register  = () => (
       <Row>
         <Col size="md-12">
           
-            <Form />
+            <RegisterForm />
           
         </Col>
       </Row>
