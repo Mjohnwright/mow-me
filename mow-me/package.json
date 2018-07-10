@@ -1,38 +1,25 @@
 {
-  "name": "mow-me",
-  "version": "1.0.0",
-  "author": "Matthew Wright",
-  "license": "MIT",
-  "scripts": {
-    "client": "cd client && yarn start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "bcrypt-nodejs": "^0.0.3",
-    "express": "^4.16.2",
-    "mongoose": "^5.2.1",
-    "morgan": "^1.9.0"
-  },
-  "devDependencies": {
-    "bcryptjs": "*",
-    "body-parser": "*",
-    "concurrently": "^3.6.0",
-    "connect-flash": "*",
-    "cookie-parser": "^1.4.1",
-    "express-handlebars": "*",
-    "express-messages": "*",
-    "express-session": "*",
-    "express-validator": "*",
-    "mongodb": "*",
-    "nodemon": "^1.17.5",
-    "passport": "*",
-    "passport-http": "*",
-    "passport-local": "*"
+    "name": "mow-me",
+    "version": "1.0.0",
+    "description": "The Uber of Lawn Mowing",
+    "main": "server.js",
+    "scripts": {
+      "client-install": "npm install --prefix client",
+      "start": "node server.js",
+      "server": "nodemon server.js",
+      "client": "npm start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "body-parser": "^1.18.3",
+      "concurrently": "^3.6.0",
+      "express": "^4.16.3",
+      "mongoose": "^5.1.6"
+    },
+    "devDependencies": {
+      "nodemon": "^1.17.5"
+    }
   }
-}
