@@ -1,6 +1,8 @@
 a.btn {
-    background-color: green;
+    background-color:#20720d;
+    color:#fbff48;
   }
   a.btn.btn-primary.btn-lg:hover {
-    background-color: pink;
+    background-color:#fbff48;
+    color:#20720d;
   }
