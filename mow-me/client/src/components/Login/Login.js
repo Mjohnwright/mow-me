@@ -16,21 +16,21 @@ class Login extends Component {
     });
   };
 
-  validateLogIn = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-    console.log("validate is fired");
-    if (this.state.username === "") {
-      alert("Please provide your Username");
-      // document.myForm.Name.focus() ;
-      return false;
-    } else if (this.state.password === "") {
-      alert("Please provide your Password!");
-      // document.myForm.email.focus() ;
-      return false;
-    }
-    this.handleLLoginFormSubmit();
-  };
+  // validateLogIn = event => {
+  //   // Preventing the default behavior of the form submit (which is to refresh the page)
+  //   event.preventDefault();
+  //   console.log("validate is fired");
+  //   if (this.state.username === "") {
+  //     alert("Please provide your Username");
+  //     // document.myForm.Name.focus() ;
+  //     return false;
+  //   } else if (this.state.password === "") {
+  //     alert("Please provide your Password!");
+  //     // document.myForm.email.focus() ;
+  //     return false;
+  //   }
+  //   this.handleLLoginFormSubmit();
+  // };
 
   handleLLoginFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
@@ -86,7 +86,7 @@ class Login extends Component {
             <button
               className="ui button"
               type="submit"
-              onClick={this.validateLogIn}
+              onClick={this.handleLLoginFormSubmit}
             >
               Submit
             </button>
