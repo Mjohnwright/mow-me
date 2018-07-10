@@ -26,33 +26,35 @@ var isAuthenticated = function (req, res, next) {
 module.exports = function(passport){
 
 	/* GET login page. */
-	router.get('/', function(req, res) {
+	router.get('/login', function(req, res) {
     	// Display the Login page with any flash message, if any
-		res.render('index', { message: req.flash('message') });
+		res.render('/login', { message: req.flash('message') });
 	});
 
 	/* Handle Login POST */
 	router.post('/login', passport.authenticate('login', {
-		successRedirect: '/',
-		failureRedirect: '/',
+		successRedirect: '/jobboard',
+		failureRedirect: '/login',
 		failureFlash : true  
 	}));
 
 	/* GET Registration Page */
-	router.get('/signup', function(req, res){
-		res.render('register',{message: req.flash('message')});
+	router.get('/register', function(req, res){
+		res.render('/login',{message: req.flash('message')});
 	});
 
 	/* Handle Registration POST */
-	router.post('/signup', passport.authenticate('signup', {
-		successRedirect: '/home',
-		failureRedirect: '/signup',
+	router.post('/register', passport.authenticate('signup', {
+		successRedirect: '/jobboard',
+		failureRedirect: '/register',
 		failureFlash : true  
 	}));
 
 	/* GET Home Page */
-	router.get('/home', isAuthenticated, function(req, res){
-		res.render('home', { user: req.user });
+
+	router.get('/', isAuthenticated, function(req, res){
+		res.render('/', { user: req.user });
+
 	});
 
 	/* Handle Logout */
