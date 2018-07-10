@@ -1,9 +1,9 @@
 import React from "react";
-import Form from "../components/Form";
-import Nav from "../components/Nav";
-import Container from "../components/Container";
-import Row from "../components/Row";
-import Col from "../components/Col";
+import Form from "../../components/Form";
+import Nav from "../../components/Nav";
+import Container from "../../components/Container";
+import Row from "../../components/Row";
+import Col from "../../components/Col";
 
 const Register  = () => (
     

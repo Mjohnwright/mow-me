@@ -14,11 +14,15 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bcrypt-nodejs": "^0.0.3",
     "express": "^4.16.2",
     "mongoose": "^5.2.1",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
     "bcryptjs": "*",
     "body-parser": "*",
+    "concurrently": "^3.6.0",
     "connect-flash": "*",
     "cookie-parser": "^1.4.1",
     "express-handlebars": "*",
@@ -26,12 +30,9 @@
     "express-session": "*",
     "express-validator": "*",
     "mongodb": "*",
+    "nodemon": "^1.17.5",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*"
-  },
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.17.5"
   }
 }

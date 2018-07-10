@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Jobs from "./pages/Jobs";
-import Register from "./pages/Register";
+import Jobs from "./pages/Jobs/Jobs";
+import Register from "./pages/Register/Register";
 import Login from "./pages/Login";
-import Home from "./pages/Home";
-// import About from "./pages/About";
-import AddJob from "./pages/AddJob";
+import Home from "./pages/Home/Home";
+// import About from "./pages/About/About";
+import AddJob from "./pages/AddJob/AddJob";
 import "./App.css";
 
 class App extends Component {
