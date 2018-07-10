@@ -74,10 +74,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-
-
-
-
 // Connect to the Mongo DB
 const MONGO = 'mongodb://localhost/mowme';
 mongoose.Promise = Promise;
