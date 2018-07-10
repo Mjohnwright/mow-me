@@ -8,7 +8,7 @@ class RegisterForm extends Component {
     lastName: "",
     phone: "",
     email: "",
-    userName: "",
+    username: "",
     password: "",
     passwordConf: ""
   };
@@ -57,13 +57,13 @@ class RegisterForm extends Component {
     console.log("POST Register is fired");
 
     axios
-      .post("/api/user/", {
+    .post("/api/user/", {
         body: {
           firstName: this.state.firstName,
           lastName: this.state.lastName,
           phone: this.state.phone,
           email: this.state.email,
-          username: this.state.userName,
+          username: this.state.username,
           password: this.state.password,
           passwordConf: this.state.passwordConf,
           dateJoined: new Date(Date.now())
@@ -81,7 +81,7 @@ class RegisterForm extends Component {
       lastName: "",
       phone: "",
       email: "",
-      userName: "",
+      username: "",
       password: "",
       passwordConf: ""
     });
@@ -145,8 +145,8 @@ class RegisterForm extends Component {
             <label>User Name</label>
             <input
               type="text"
-              value={this.state.userName}
-              name="userName"
+              value={this.state.username}
+              name="username"
               onChange={this.handleRegisterInputChange}
             />
           </div>
