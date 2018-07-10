@@ -27,5 +27,11 @@ module.exports = {
       .find({})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  update: function(req, res) {
+    db.Users
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbArticle => res.json(dbArticle))
+      .catch(err => res.status(422).json(err));
   }
 };

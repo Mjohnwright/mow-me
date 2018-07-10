@@ -9,7 +9,7 @@ const jobsSchema = new Schema({
   zipCode: { type: String, required: true },
   price: { type: String, required: true },
   dateNeededBy: { type: Date, default: Date.now },
-  // jobChosen:{ type: Boolean, required: false, default:false },
+  jobChosen:{ type: Boolean, required: false, default:false },
   user: [
     {
       // Store ObjectIds in the array
@@ -23,14 +23,3 @@ const jobsSchema = new Schema({
 const Jobs = mongoose.model("Jobs", jobsSchema);
 
 module.exports = Jobs;
-
-
-/*•	UserName
-•	Street address
-•	City
-•	State
-•	Zip Code
-•	Price
-•	Needs to be completed by date
-•	I want this job 
-*/

@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import "./CreateJob.css";
-import axios from 'axios';
+import axios from "axios";
 
 class CreateJob extends Component {
   state = {
-    userName: "",
+    username: "",
     streetAddress: "",
     city: "",
     state: "",
-    zip: "",
+    zipCode: "",
     price: "",
-    cutDate: "",
-  }
+    dateNeededBy: "",
+    jobChosen: false
+  };
 
   handleCreateJobInInputChange = event => {
     const { name, value } = event.target;
-    
+
     // Updating the input's state
     this.setState({
       [name]: value
@@ -23,173 +24,161 @@ class CreateJob extends Component {
   };
 
   handleCreateJobValidate = event => {
-// Preventing the default behavior of the form submit (which is to refresh the page)
-event.preventDefault();
-console.log("validate Register is fired");
-// Set of conditions to validate a New User's data
- if( this.state.userName === "") {
-    alert( "Please provide your User Name" );
-    return false;
- }
-  else if (this.state.streetAddress === "" )
- {
-    alert( "Please provide your street address" );
-    return false;
- }
- else if (this.state.city === "" )
- {
-    alert( "Please provide your city" );
-    return false;
- }
- else if (this.state.state === "" )
- {
-    alert( "Please provide your state" );
-    return false;
- }
- else if (this.state.zip === "" )
- {
-    alert( "Please provide your zip code" );
-    return false;
- }
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    console.log("validate Register is fired");
+    // Set of conditions to validate a New User's data
+    if (this.state.username === "") {
+      alert("Please provide your User Name");
+      return false;
+    } else if (this.state.streetAddress === "") {
+      alert("Please provide your street address");
+      return false;
+    } else if (this.state.city === "") {
+      alert("Please provide your city");
+      return false;
+    } else if (this.state.state === "") {
+      alert("Please provide your state");
+      return false;
+    } else if (this.state.zipCode === "") {
+      alert("Please provide your zip code");
+      return false;
+    } else if (this.state.price === "") {
+      alert("Please select your price");
+      return false;
+    } else if (this.state.dateNeededBy === "") {
+      alert("Please select a date");
+      return false;
+    }
 
- else if (this.state.price === "" )
- {
-    alert( "Please select your price" );
-    return false;
- }
- else if (this.state.cutDate === "" )
- {
-    alert( "Please select a date" );
-    return false;
- }
+    this.handleCreateJobSubmit(event);
+  };
 
- this.handleCreateJobSubmit(event);
+  handleCreateJobSubmit = event => {
+    console.log("POST is fired");
+    
+    axios
+      .post("/api/jobs/", {
+        body: {
+          username: this.state.username,
+          streetAddress: this.state.streetAddress,
+          city: this.state.city,
+          state: this.state.state,
+          zipCode: this.state.zipCode,
+          price: this.state.price,
+          dateNeededBy: this.state.dateNeededBy,
+          jobChosen: this.state.jobChosen
+        }
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
 
-  }
-
-handleCreateJobSubmit (event) {
-  console.log("POST is fired");
-   //fires the register function to pass the data to the database
-  //  alert(`Hello ${this.state.userName} job is listed for  ${this.state.price}`);
-   axios.post('/api/newJob',
-   {params: {
-      username: this.state.userName,
-      streetAddress: this.state.streetAddress,
-      city: this.state.city,
-      state: this.state.state,
-      zip: this.state.zip,
-      price: this.state.price,
-      cutDate: this.state.cutDate
-      } 
-    })
-    .then(res => {
-    console.log(res);
-    console.log(res.data);
-      
-      this.setState({
-        userName: "",
-        streetAddress: "",
-        city: "",
-        state: "",
-        zip: "",
-        price: "",
-        cutDate: "",
-      }); 
-    })
-};
-
+    this.setState({
+      username: "",
+      streetAddress: "",
+      city: "",
+      state: "",
+      zipCode: "",
+      price: "",
+      dateNeededBy: ""
+    });
+  };
 
   render() {
     return (
-<div>
-        <p>
-          {/* Hello {this.state.firstName} {this.state.lastName} */}
-        </p>
- 
+      <div>
+        <p>{/* Hello {this.state.firstName} {this.state.lastName} */}</p>
 
-  <form className="createJob-form">
+        <form className="createJob-form">
+          <h3>Let's Create a Job</h3>
 
-    <h3>Let's Create a Job</h3>
+          <div className="field">
+            <label>User Name</label>
+            <input
+              type="text"
+              value={this.state.username}
+              name="username"
+              onChange={this.handleCreateJobInInputChange}
+            />
+          </div>
 
+          <div className="field">
+            <label>Street Address</label>
+            <input
+              type="text"
+              value={this.state.streetAddress}
+              name="streetAddress"
+              onChange={this.handleCreateJobInInputChange}
+            />
+          </div>
 
-    <div className="field">
-    <label>User Name</label>
-    <input type="text"
-    value={this.state.userName}
-    name="userName"
-    onChange={this.handleCreateJobInInputChange}
-    />
-  </div>
- 
-   <div className="field">
-    <label>Street Address</label>
-    <input type="text"
-    value={this.state.streetAddress}
-    name="streetAddress"
-    onChange={this.handleCreateJobInInputChange}
-    />
-  </div>
+          <div className="field">
+            <label>City</label>
+            <input
+              type="text"
+              value={this.state.city}
+              name="city"
+              onChange={this.handleCreateJobInInputChange}
+            />
+          </div>
 
-  <div className="field">
-    <label>City</label>
-      <input type="text"
-      value={this.state.city}
-      name="city"
-      onChange={this.handleCreateJobInInputChange}
-      />
-   </div>
+          <div className="field">
+            <label>State</label>
+            <input
+              type="state"
+              value={this.state.state}
+              name="state"
+              onChange={this.handleCreateJobInInputChange}
+            />
+          </div>
 
-  <div className="field">
-  <label>State</label>
-    <input type="state"
-    value={this.state.state}
-    name="state"
-    onChange={this.handleCreateJobInInputChange}
-    />
-  </div>
+          <div className="field">
+            <label>Zip Code</label>
+            <input
+              type="text"
+              value={this.state.zipCode}
+              name="zipCode"
+              onChange={this.handleCreateJobInInputChange}
+            />
+          </div>
 
-  <div className="field">
-    <label>Zip</label>
-    <input type="text"
-    value={this.state.zip}
-    name="zip"
-    onChange={this.handleCreateJobInInputChange}
-    />
-  </div>
+          <div className="field">
+            <label>Price</label>
+            <input
+              type="text"
+              value={this.state.price}
+              name="price"
+              onChange={this.handleCreateJobInInputChange}
+            />
+          </div>
 
-  <div className="field">
-    <label>Price</label>
-    <input type="text"
-    value={this.state.price}
-    name="price"
-    onChange={this.handleCreateJobInInputChange}
-    />
-  </div>
+          <div className="field">
+            <label>Cut Date</label>
+            <input
+              type="date"
+              value={this.state.dateNeededBy}
+              name="dateNeededBy"
+              onChange={this.handleCreateJobInInputChange}
+            />
+          </div>
 
-  <div className="field">
-    <label>Cut Date</label>
-    <input type="text"
-    value={this.state.cutDate}
-    name="cutDate"
-    onChange={this.handleCreateJobInInputChange}
-    />
-  </div>
-
-  <div className="field">
-      <button className="ui button" 
-      type="submit" 
-      onClick={this.handleCreateJobValidate}>Submit</button>
-  </div>
-
-  </form>
-
-  </div>
-
-);
+          <div className="field">
+            <button
+              className="ui button"
+              type="submit"
+              onClick={this.handleCreateJobValidate}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    );
   }
-}; 
+}
 
-export default CreateJob
-  
-
-
+export default CreateJob;

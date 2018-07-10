@@ -16,12 +16,3 @@ const User = mongoose.model("User", userSchema);
 
 module.exports = User;
 
-/*Create Account:
-•	First Name
-•	Last Name
-•	Phone
-•	Email address
-•	UserName
-•	Password1
-•	Password2
-*/

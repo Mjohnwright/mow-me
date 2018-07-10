@@ -1,16 +1,25 @@
 const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const db = require("./models");
 const logger = require('morgan')
-const routes = require("./routes/api");
+const routes = require("./routes");
+const expressValidator = require('express-validator');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
 const PORT = process.env.PORT || 3001;
  
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
+app.use(cookieParser());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -19,6 +28,55 @@ if (process.env.NODE_ENV === "production") {
 
 // Add routes, both API and view
 app.use(routes);
+
+//Express Session
+app.use(session({
+  secret: 'secret',
+  saveUnitialized: true,
+  resave: true
+}));
+
+// Passport init
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Initialize Passport
+var initPassport = require('./passport/init');
+initPassport(passport);
+
+// Express Validator
+app.use(expressValidator({
+  errorFormatter: function(param, msg, value) {
+      var namespace = param.split('.')
+      , root    = namespace.shift()
+      , formParam = root;
+
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+    return {
+      param : formParam,
+      msg   : msg,
+      value : value
+    };
+  }
+}));
+
+// Connect Flash
+app.use(flash());
+
+// Global Vars
+app.use(function (req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  res.locals.user = req.user || null;
+  next();
+});
+
+
+
+
 
 // Connect to the Mongo DB
 const MONGO = 'mongodb://localhost/mowme';

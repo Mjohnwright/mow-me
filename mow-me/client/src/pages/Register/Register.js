@@ -24,7 +24,7 @@ const Register  = () => (
       </Row>
     </Container>
     
-    </div>
+    </div> 
     
     );
 
