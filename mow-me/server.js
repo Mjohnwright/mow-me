@@ -40,6 +40,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Initialize Passport
+var initPassport = require('./passport/init');
+initPassport(passport);
+
 // Express Validator
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {

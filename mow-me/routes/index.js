@@ -51,8 +51,10 @@ module.exports = function(passport){
 	}));
 
 	/* GET Home Page */
+
 	router.get('/', isAuthenticated, function(req, res){
 		res.render('/', { user: req.user });
+
 	});
 
 	/* Handle Logout */
