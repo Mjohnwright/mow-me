@@ -1,0 +1,54 @@
+body {
+    background-color: none;
+    background-image: url(../src/images/main.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+div {
+    background-color: none;
+}
+
+div.row {
+    background-color: none;
+}
+
+a.btn {
+    background-color: green;
+}
+
+a.btn.btn-primary.btn-lg:hover {
+    background-color: red;
+}
+
+h1 {
+    font-family: mignone;
+    color: white;
+    text-align: center;
+}
+
+h1.display-4 {
+    color: white;
+    text-align: center;
+}
+
+p.lead {
+    color: orange;
+}
+
+a.navbar-brand {
+    color: white;
+}
+
+p {
+    color: yellow;
+    text-align: center;
+}
+
+p.lead {
+    background-color: none;
+}
+
+nav {
+    align-content: center;
+}
