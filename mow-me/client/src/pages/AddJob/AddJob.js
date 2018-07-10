@@ -1,16 +1,18 @@
 import React from "react";
-import Jumbo from "../components/Jumbo";
-import Nav from "../components/Nav";
-import Container from "../components/Container";
-import Row from "../components/Row";
-import Col from "../components/Col";
-const Home  = () => (
+import CreateJob from "../../components/CreateJob";
+import Nav from "../../components/Nav";
+import Container from "../../components/Container";
+import Row from "../../components/Row";
+import Col from "../../components/Col";
+
+
+const AddJob  = () => (
 <div>
     
     
     < Nav />
     <Container style={{ marginTop: 30 }}>
-      <Row>
+    <Row>
         <Col size="md-12">
           <h1>Welcome To MowMe!</h1>
         </Col>
@@ -18,18 +20,16 @@ const Home  = () => (
       <Row>
         <Col size="md-12">
           
-            <Jumbo />
+        < CreateJob />
           
         </Col>
       </Row>
     </Container>
-    
 
+    
 
 
 </div>
 );
 
-export default Home;
-
-
+export default AddJob;

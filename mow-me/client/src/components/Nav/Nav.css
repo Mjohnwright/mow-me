@@ -1,0 +1,25 @@
+a.navbar-brand {
+    color: #20720d;
+    background-color: #fbff48;
+  }
+  nav {
+    align-content: center;
+  }
+  a {
+    color: #20720d;
+    background-color: #fbff48;
+    text-align: center;
+    border-radius: 5px;
+  }
+  a:hover {
+    background-color: blue;
+    border-radius: 10px;
+  }
+  li:hover {
+      background-color: red;
+  }
+ li:active {
+    background-color: orange;
+    border-radius: 10px;
+  }
+ 

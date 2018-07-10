@@ -1,9 +1,10 @@
 import React from "react";
-import Container from "../components/Container";
-import Row from "../components/Row";
-import Col from "../components/Col";
-import Nav from "../components/Nav";
-import AboutUs from "../components/AboutUs";
+import Container from "../../components/Container";
+import Row from "../../components/Row";
+import Col from "../../components/Col";
+import Nav from "../../components/Nav";
+import AboutUs from "../../components/AboutUs";
+
 
 
 const About  = () => (
