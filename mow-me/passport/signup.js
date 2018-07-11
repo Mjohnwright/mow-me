@@ -35,7 +35,7 @@ module.exports = function(passport){
                         newUser.lastName = req.param('lastName');
 
                         // save the user
-                        newUser.save(function(err) {
+                        newUser.create(function(err) {
                             if (err){
                                 console.log('Error in Saving user: '+err);  
                                 throw err;  
