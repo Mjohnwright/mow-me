@@ -57,7 +57,7 @@ class RegisterForm extends Component {
     console.log("POST Register is fired");
 
     axios
-    .post("/api/user/", {
+    .post("/api/users/", {
         body: {
           firstName: this.state.firstName,
           lastName: this.state.lastName,
