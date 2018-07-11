@@ -5,7 +5,7 @@ const userRoutes = require("./user");
 // job routes
 router.use("/jobs", jobRoutes);
 // user routes
-router.use("/user", userRoutes);
+router.use("/users", userRoutes);
 
 var isAuthenticated = function (req, res, next) {
 	// if user is authenticated in the session, call the next() to call the next request handler 
