@@ -37,7 +37,7 @@ class Login extends Component {
     alert(`Hello ${this.state.username} your login is is submitted.`);
 
     axios
-      .post("/user/", {
+      .post("/users/login", {
         body: {
           username: this.state.username,
           password: this.state.password
