@@ -25,6 +25,7 @@ class App extends Component {
           <Route exact path="/jobboard" component={Jobs} />
           {/* <Route exact path="/about" component={About} />  */}
           <Route exact path="/createjob" component={AddJob} /> 
+          <Route exact path="/map" component={Map} /> 
   
        </div>
   
