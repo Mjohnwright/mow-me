@@ -2,7 +2,8 @@ import React from "react";
 import "./AllJobs.css";
 
 const AllJobs = () => (
-  <div>
+  <div className="transbox-alljobs">
+  
     <thead id="tHead">
     <tr>
       <th scope="col">User Name</th>

@@ -1,14 +1,16 @@
-
-a.navbar-brand:hover {
-    color: #fbff48;
-    background-color:#20720d;
+button {
+    background-color:#387b2b;
+    color:#fbe017;
+    border-color:none;
 }
-
 a {
-color: #20720d;
-background-color: #fbff48;
-text-align: center;
-border-radius: 5px;
+    color:#fbe017;
 }
-
-
+button:hover {
+    background-color:#fbe017;
+    color:#fbe017;
+    border-color:#fbe017;
+}
+a:hover {
+    color:#387b2b;
+}

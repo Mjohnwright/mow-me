@@ -12,11 +12,7 @@ const About  = () => (
         
         < Nav />
         <Container style={{ marginTop: 30 }}>
-      <Row>
-        <Col size="md-12">
-          <h1><center><strong>Log In</strong></center></h1>
-        </Col>
-      </Row>
+      
       <Row>
         <Col size="md-12">
           

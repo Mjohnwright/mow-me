@@ -90,15 +90,15 @@ class CreateJob extends Component {
 
   render() {
     return (
-      <div>
-        <p>{/* Hello {this.state.firstName} {this.state.lastName} */}</p>
+      <div className="transbox-create">
+        <p>Hello {this.state.firstName} {this.state.lastName}</p>
 
         <form className="createJob-form">
           <h3>Let's Create a Job</h3>
 
-          <div className="field">
-            <label>User Name</label>
-            <input
+          <div className="field-create">
+            <label className="label">User Name</label>
+            <input className="input-create"
               type="text"
               value={this.state.username}
               name="username"
@@ -106,9 +106,9 @@ class CreateJob extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-create">
             <label>Street Address</label>
-            <input
+            <input className="input-create"
               type="text"
               value={this.state.streetAddress}
               name="streetAddress"
@@ -116,9 +116,9 @@ class CreateJob extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-create">
             <label>City</label>
-            <input
+            <input className="input-create"
               type="text"
               value={this.state.city}
               name="city"
@@ -126,9 +126,9 @@ class CreateJob extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-create">
             <label>State</label>
-            <input
+            <input className="input-create"
               type="state"
               value={this.state.state}
               name="state"
@@ -136,9 +136,9 @@ class CreateJob extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-create">
             <label>Zip Code</label>
-            <input
+            <input className="input-create"
               type="text"
               value={this.state.zipCode}
               name="zipCode"
@@ -146,9 +146,9 @@ class CreateJob extends Component {
             />
           </div>
 
-          <div className="field">
-            <label>Price</label>
-            <input
+          <div className="field-create">
+            <label>Price that you want to PAY!</label>
+            <input className="input-create"
               type="text"
               value={this.state.price}
               name="price"
@@ -156,9 +156,9 @@ class CreateJob extends Component {
             />
           </div>
 
-          <div className="field">
-            <label>Cut Date</label>
-            <input
+          <div className="field--create">
+            <label>Date that you want service</label>
+            <input className="input-create"
               type="date"
               value={this.state.dateNeededBy}
               name="dateNeededBy"
@@ -166,13 +166,13 @@ class CreateJob extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-create">
             <button
-              className="ui button"
+              className="ui button-create"
               type="submit"
               onClick={this.handleCreateJobValidate}
             >
-              Submit
+              Submit Your Job
             </button>
           </div>
         </form>

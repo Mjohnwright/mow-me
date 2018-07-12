@@ -4,31 +4,19 @@ import Nav from "../../components/Nav";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
+import "./AddJob.css";
 
 
 const AddJob  = () => (
 <div>
-    
-    
-    < Nav />
-    <Container style={{ marginTop: 30 }}>
-    <Row>
-        <Col size="md-12">
-          <h1>Welcome To MowMe!</h1>
-        </Col>
-      </Row>
+  < Nav />
+    <Container style={{ marginTop: 10 }}>
       <Row>
         <Col size="md-12">
-          
-        < CreateJob />
-          
+          < CreateJob />
         </Col>
       </Row>
     </Container>
-
-    
-
-
 </div>
 );
 

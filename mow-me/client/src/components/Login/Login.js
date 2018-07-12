@@ -58,13 +58,14 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="transbox-login">
         <form className="login-form" name="login">
-          <h3>Sign In to Your Account</h3>
+          <h3>Welcome Back</h3>
+          <h5>Sign In Here</h5>
 
-          <div className="field">
+          <div className="field-login">
             <label>User Name</label>
-            <input
+            <input className="input-login"
               type="text"
               value={this.state.username}
               name="username"
@@ -72,9 +73,9 @@ class Login extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-login">
             <label>Password</label>
-            <input
+            <input className="input-login"
               type="text"
               value={this.state.password}
               name="password"
@@ -82,13 +83,13 @@ class Login extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-login">
             <button
-              className="ui button"
+              className="ui button-login"
               type="submit"
               onClick={this.validateLogIn}
             >
-              Submit
+              Log-In Here
             </button>
           </div>
         </form>

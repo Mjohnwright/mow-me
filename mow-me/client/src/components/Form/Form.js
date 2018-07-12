@@ -96,18 +96,16 @@ class Form extends Component {
     });
   };
 
-  
-
   render() {
     return (
-      <div>
+      <div className="transbox-form">
 
         <form className="register-form">
           <h3>Register Account</h3>
 
-          <div className="field">
+          <div className="field-form">
             <label>First Name</label>
-            <input
+            <input className="input-form"
               type="text"
               value={this.state.firstName}
               name="firstName"
@@ -115,9 +113,9 @@ class Form extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-form">
             <label>Last Name</label>
-            <input
+            <input className="input-form"
               type="text"
               value={this.state.lastName}
               name="lastName"
@@ -125,10 +123,10 @@ class Form extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-form">
             <label>Phone Number</label>
-            <div className="field">
-              <input
+            <div>
+              <input className="input-form"
                 type="text"
                 value={this.state.phone}
                 name="phone"
@@ -138,9 +136,9 @@ class Form extends Component {
             </div>
           </div>
 
-          <div className="field">
+          <div className="field-form">
             <label>E-mail</label>
-            <input
+            <input className="input-form"
               type="email"
               value={this.state.email}
               name="email"
@@ -149,9 +147,9 @@ class Form extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-form">
             <label>User Name</label>
-            <input
+            <input className="input-form"
               type="text"
               value={this.state.userName}
               name="userName"
@@ -159,9 +157,9 @@ class Form extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-form">
             <label>Password</label>
-            <input
+            <input className="input-form"
               type="text"
               value={this.state.password}
               name="password"
@@ -169,9 +167,9 @@ class Form extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-form">
             <label>Confirm Password</label>
-            <input
+            <input className="input-form"
               type="text"
               value={this.state.passwordConf}
               name="passwordConf"
@@ -179,13 +177,13 @@ class Form extends Component {
             />
           </div>
 
-          <div className="field">
+          <div className="field-form">
             <button
-              className="ui button"
+              className="ui button-form"
               type="submit"
               onClick={this.ValidateRegister}
             >
-              Submit
+             Register Now
             </button>
           </div>
         </form>

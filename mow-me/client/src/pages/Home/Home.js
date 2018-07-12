@@ -4,30 +4,12 @@ import Nav from "../../components/Nav";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
+import "./Home.css";
 const Home  = () => (
 <div>
-    
-    
-    < Nav />
-    <Container style={{ marginTop: 30 }}>
-      <Row>
-        <Col size="md-12">
-          <h1>mow-me</h1>
-        </Col>
-      </Row>
-      <Row>
-        <Col size="md-12">
-          
-            <Jumbo />
-          
-        </Col>
-      </Row>
-    </Container>
-    
-
-
-
-</div>
+     < Nav />
+     < Jumbo />
+    </div>
 );
 
 export default Home;

@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home/Home";
 // import About from "./pages/About/About";
 import AddJob from "./pages/AddJob/AddJob";
-import "./App.css";
+
 
 class App extends Component {
 

@@ -1,8 +1,38 @@
-a.btn {
-    background-color:#20720d;
-    color:#fbff48;
+
+.btn  {
+  
+    width: 300px;
+    border: 1px solid #fbe017;
+    padding: 15px;
+    background-color: #387b2b;
+    color:#fbe017;
+    margin: 100px;
+    margin-top: 300px;
+    opacity: 0.9;
+
+}
+.btn:hover  {
+    float: inherit;
+    width: 300px;
+    border: 1px solid #387b2b;
+    padding: 10px;
+    background-color: #fbe017;
+    color:#387b2b;
+    opacity: 0.9;
+ }
+a:not([href]):not([tabindex]) {
+    color: #fbe017;
+}
+.container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 500px auto;
+    margin-left: 400px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
-  a.btn.btn-primary.btn-lg:hover {
-    background-color:#fbff48;
-    color:#20720d;
-  }
+
