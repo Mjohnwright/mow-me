@@ -3,7 +3,7 @@ const usersController = require("../../controllers/usersController");
 
 // Matches with "/api/users"
 router
-  .route("/users/register")
+  .route("/")
   .post(usersController.create);
 
   //validation for passport
