@@ -58,47 +58,40 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="center">
-        <div className="jumbotron-login">
-        
-        </div>
-        <div className="transbox-login-bg">
-          <div className="transbox-login">
-            <form className="login-form" name="login">
-              <h3>Log-In to Your Account</h3>
+      <div>
+        <form className="login-form" name="login">
+          <h3>Sign In to Your Account</h3>
 
-              <div className="field-login">
-                <label>User Name</label>
-                <input className="input-login"
-                  type="text"
-                  value={this.state.username}
-                  name="username"
-                  onChange={this.handleRegisterInputChange}
-                />
-              </div>
-
-              <div className="field-login">
-                <label>Password</label>
-                <input className="input-login"
-                  type="text"
-                  value={this.state.password}
-                  name="password"
-                  onChange={this.handleRegisterInputChange}
-                />
-              </div>
-
-              <div className="field-login">
-                <button
-                  className="ui button-login"
-                  type="submit"
-                  onClick={this.handleLLoginFormSubmit}
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+          <div className="field">
+            <label>User Name</label>
+            <input
+              type="text"
+              value={this.state.username}
+              name="username"
+              onChange={this.handleRegisterInputChange}
+            />
           </div>
-        </div>
+
+          <div className="field">
+            <label>Password</label>
+            <input
+              type="text"
+              value={this.state.password}
+              name="password"
+              onChange={this.handleRegisterInputChange}
+            />
+          </div>
+
+          <div className="field">
+            <button
+              className="ui button"
+              type="submit"
+              onClick={this.handleLLoginFormSubmit}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     );
   }

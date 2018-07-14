@@ -1,4 +1,44 @@
-.a.navbar-brand {
-    background-color:red;
-      }
+.input-create {
+  background-color:white;
+  color:white;
+  margin-left: 20px;
+  border-radius: 6px;
+}
+.jumbotron-create{
+  position:absolute;
+  z-index:  -50;
+  background-color: #1e6f41;
+  width: 350px;
+  height: 525px;
+  margin-left:350px;
+  opacity: .6;
+}
+div.transbox-create{
+  position: absolute;
+  background-color: none;
+  width: 400px;
+  height: 400px;
+  margin-left:340px;
+}
+.button-create {
+  width: 50%;
+  background-color: blue;
+  color: white;
+  padding: 4px 4px;
+  margin-left:60px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.field-create {
+  background-color:none;
+  margin-left:60px;
+}
+.createJob-form{
+  color:white;
+  width: 300px;
+  height: 250px;
+  padding: 6px 20px;
   
+}

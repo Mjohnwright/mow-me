@@ -10,14 +10,22 @@ const Register  = () => (
     <div>
         <Nav />
         <Container style={{ marginTop: 30 }}>
-          <Row>
-            <Col size="md-12">
-              <RegisterForm />
-            </Col>
-          </Row>
-        </Container>
-        
+      <Row>
+        <Col size="md-12">
+          <h1>Welcome To MowMe!</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col size="md-12">
+          
+            <RegisterForm />
+          
+        </Col>
+      </Row>
+    </Container>
+    
     </div> 
-  );
+    
+    );
 
 export default Register;
