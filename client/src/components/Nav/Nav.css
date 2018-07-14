@@ -1,14 +1,26 @@
 
-a.navbar-brand:hover {
-    color: #fbff48;
-    background-color:#20720d;
+.navbar-brand {
+    
+    opacity: 5.0;
 }
 
-a {
-color: #20720d;
-background-color: #fbff48;
-text-align: center;
-border-radius: 5px;
+
+.btn-outlined.btn-success {
+    background: #fbff48;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
 }
+.btn-outlined.btn-success a:hover {
+    text-decoration: none;
+};
+    
+.btn-outlined.btn-success:active {
+    font-weight: bold;
+    color: #FFF;
+    background: #47a447;
+}
+
+
 
 
