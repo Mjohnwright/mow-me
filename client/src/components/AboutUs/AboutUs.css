@@ -83,11 +83,25 @@
     -ms-flex-preferred-size: 11.11111%;
         flex-basis: 11.11111%;
   }
+  /* .at-column-bg {
+    z-index: -50;
+    opacity: 1;
+    position: absolute;
+    background:none;
+    box-shadow: 0 0 0 1px none;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-transition: box-shadow 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+    transition: box-shadow 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+  } */
   .at-column {
     z-index: 0;
     position: relative;
-    background: #FFF;
-    box-shadow: 0 0 0 1px #E2E9ED;
+    background:beige;
+    /* background-image: url(../../images/main1.png); */
+    box-shadow: 0 0 0 1px none;
     padding: 10px;
     box-sizing: border-box;
     -webkit-transition: box-shadow 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
@@ -95,6 +109,7 @@
     transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
     transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
   }
+  
   .at-column:before {
     content: "";
     display: block;
@@ -133,7 +148,7 @@
     }
   }
   .at-user {
-    position: absolute;
+    position:absolute;
     top: 50%;
     left: 0;
     width: 100%;
@@ -142,8 +157,8 @@
     text-align: center;
   }
   .at-user__avatar {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
     margin: 0 auto 20px;
     overflow: hidden;
@@ -191,7 +206,7 @@
   }
   
   body {
-    background: #FFF;
+    background: none;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -200,7 +215,7 @@
   .container {
     max-width: 1170px;
     width: 100%;
-    margin: 50px auto;
+    margin:  auto;
     padding: 0 20px;
     box-sizing: border-box;
     -webkit-transform-origin: top center;
