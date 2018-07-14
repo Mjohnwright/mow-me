@@ -7,27 +7,18 @@ import Login from "../components/Login";
 
 
 const About  = () => (
-    <div>
-        
-        
-        < Nav />
-        <Container style={{ marginTop: 30 }}>
-      <Row>
-        <Col size="md-12">
-          <h1><center><strong>Log In</strong></center></h1>
-        </Col>
-      </Row>
-      <Row>
-        <Col size="md-12">
-          
+  <div>
+    < Nav />
+      <Container style={{ marginTop: 30 }}>
+        <Row>
+          <Col size="md-12">
+            
             <Login />
-          
-        </Col>
-      </Row>
-    </Container>
-    
-    
-    </div>
+            
+          </Col>
+        </Row>
+      </Container>
+  </div>
     );
     
     export default About;
