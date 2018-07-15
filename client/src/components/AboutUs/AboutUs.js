@@ -8,7 +8,7 @@ const AboutUs = () => (
   
       <div className="at-column">
         <div className="at-user">
-          <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/marclewin.jpg"/></div>
+          <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/marclewin.jpg" alt="Marc Lewin"/></div>
           <div className="at-user__name">Marc Lewin</div>
           <ul className="at-social">
             <li className="at-social__item"><a href="mailto:marclewin6699@gmail.com?Subject=MowMe%20Website">
@@ -29,7 +29,7 @@ const AboutUs = () => (
  
       <div className="at-column">
         <div className="at-user">
-        <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/mattmcc.jpg"/></div>
+        <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/mattmcc.jpg" alt="Matt McCarthy"/></div>
           <div className="at-user__name">Matt McCarthy</div>
           <ul className="at-social">
             <li className="at-social__item"><a href="mailto:matthewmccarthy2@gmail.com?Subject=MowMe%20Website">
@@ -50,7 +50,7 @@ const AboutUs = () => (
   
       <div className="at-column">
         <div className="at-user">
-        <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/JoeMccC.jpg"/></div>
+        <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/JoeMccC.jpg" alt="Joe McCreesh"/></div>
           <div className="at-user__name">Joe McCreesh</div>
           <ul className="at-social">
             <li className="at-social__item"><a href="mailto:jmccreesh@libertyintegrated.com?Subject=MowMe%20Website">
@@ -71,7 +71,7 @@ const AboutUs = () => (
 
       <div className="at-column">
         <div className="at-user">
-        <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/mattwright.jpg"/></div>
+        <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/mattwright.jpg" alt="Matthew Wright"/></div>
           <div className="at-user__name">Matthew Wright</div>
           <ul className="at-social">
             <li className="at-social__item"><a href="mailto:matthewjohnwright@gmail.com?Subject=MowMe%20Website">
