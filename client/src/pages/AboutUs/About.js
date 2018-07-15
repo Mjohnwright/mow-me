@@ -14,8 +14,8 @@ const About  = () => (
         < Nav />
         <Container style={{ marginTop: 30 }}>
       <Row>
-        <Col size="md-12">
-          <h1><center><strong>Meet the Team</strong></center></h1>
+        <Col size="md-6">
+          <h2><center><strong>Meet Our Developers</strong></center></h2>
         </Col>
       </Row>
       <Row>
