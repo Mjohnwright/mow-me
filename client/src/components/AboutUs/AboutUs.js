@@ -4,7 +4,7 @@ import "./AboutUs.css";
 const AboutUs = () => ( 
 <div className="container">
   <div className="at-grid" data-column="6">
-    {/* <div className="at-column-bg"> */}
+  
       <div className="at-column">
         <div className="at-user">
           <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/marclewin.jpg"/></div>
@@ -25,8 +25,7 @@ const AboutUs = () => (
           </ul>
         </div>
       </div>
-    {/* </div> */}
-    {/* <div className="at-column-bg"> */}
+ 
       <div className="at-column">
         <div className="at-user">
         <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/mattmcc.jpg"/></div>
@@ -47,8 +46,7 @@ const AboutUs = () => (
           </ul>
         </div>
       </div>
-    {/* </div> */}
-    {/* <div className="at-column-bg"> */}
+  
       <div className="at-column">
         <div className="at-user">
         <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/JoeMccC.jpg"/></div>
@@ -69,8 +67,7 @@ const AboutUs = () => (
           </ul>
         </div>
       </div>
-    {/* </div> */}
-    {/* <div className="at-column-bg"> */}
+
       <div className="at-column">
         <div className="at-user">
         <div className="at-user__avatar"><img src="https://s3.us-east-2.amazonaws.com/devteammembers/mattwright.jpg"/></div>
@@ -92,7 +89,7 @@ const AboutUs = () => (
           </ul>
         </div>
       </div>
-    {/* </div> */}
+
   </div>
 </div> 
 );
