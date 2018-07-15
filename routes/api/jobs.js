@@ -14,4 +14,8 @@ router
   .put(jobsController.update)
   .delete(jobsController.remove);
 
+  router
+  .route("/")
+  .get(jobsController.findAll);
+
 module.exports = router;

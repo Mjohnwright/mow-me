@@ -28,6 +28,10 @@
     "passport-local": "^1.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+<<<<<<< HEAD
+    "react-router-dom": "^4.3.1",
+=======
+>>>>>>> 43b9a7c50e69840516f5f7afa8aa7bf693588899
     "react-scripts": "^1.1.4"
   },
   "devDependencies": {
