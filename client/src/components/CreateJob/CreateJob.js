@@ -56,10 +56,6 @@ class CreateJob extends Component {
 
   handleCreateJobSubmit = event => {
     event.preventDefault();
-<<<<<<< HEAD
-
-=======
->>>>>>> 603f6f552873fe5d7abb2fbba94cc9cd2410698b
     console.log("Create job POST is fired");
     
     axios
