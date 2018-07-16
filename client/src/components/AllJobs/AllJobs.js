@@ -15,17 +15,24 @@ class AllJobs extends Component {
     jobChosen: false
   };
 
+  componentDidMount() {
+    this.handleAllJobsLoad();
+  }
+
+
   handleAllJobsLoad = event => {
     console.log("Get is fired");
     
     axios
       .get("/api/jobs/", function(response) {
-        console.log(JSON.stringify(response))
+        
       })
       .then(function(response) {
-        let jobsArray= JSON.stringify(response["data"])
-         this.setState({
-           jobs:jobsArray
+        console.log(JSON.stringify(response["data"]))
+        //let jobsArray= JSON.stringify(response["data"])
+        //console.log(jobsArray);
+        // this.setState({
+          // jobs:JSON.stringify(response["data"])
             // username: "",
             // streetAddress: "",
             // city: "",
@@ -34,11 +41,11 @@ class AllJobs extends Component {
             // price: "",
             // dateNeededBy: "",
             // jobChosen: false
-          });
-          console.log(this.state.jobs)
-        console.log(JSON.stringify(response["data"]));
-         let jobsTest = JSON.stringify(response["data"]);
-         console.log(jobsTest)
+         // });
+          //console.log(this.state.jobs)
+        //console.log(JSON.stringify(response["data"]));
+         //let jobsTest = JSON.stringify(response["data"]);
+         //console.log(jobsTest)
 
         // for (var i= 0; i< JSON.stringify(response["data"].length); i++){
         //   //jobs+= i
@@ -143,7 +150,7 @@ class AllJobs extends Component {
                 />
               </div>
 
-              <div className="field-create">
+              {/* <div className="field-create">
                 <button
                   className="ui button-create"
                   type="submit"
@@ -151,7 +158,7 @@ class AllJobs extends Component {
                 >
                   Submit
                 </button>
-              </div>
+              </div> */}
             </form>
           </div>
         </div>
