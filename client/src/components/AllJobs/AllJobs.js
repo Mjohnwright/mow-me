@@ -57,19 +57,22 @@ class AllJobs extends Component {
       .catch(function(error) {
         console.log(error);
       })
-
-  
+ 
 };
 
 
-
-
-
- 
-  render() {
-    return (
-<div>
-  <thead id="tHead">
+render() {
+  this.about();
+var display=this.state.hobby.map(function(things,index){
+    return(
+        <tr><td>{things}</td></tr>
+    );
+});
+    
+return(
+     <div>
+      
+     <thead id="tHead">
      <tr>
 
       <th scope="col">User Name</th>
