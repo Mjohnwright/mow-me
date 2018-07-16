@@ -4,7 +4,7 @@ import Jobs from "./pages/Jobs/Jobs";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home/Home";
-// import About from "./pages/About/About";
+import AboutUs from "./pages/AboutUs/About";
 import AddJob from "./pages/AddJob/AddJob";
 import Map from "./pages/Map/Map";
 
@@ -23,7 +23,7 @@ class App extends Component {
           <Route exact path="/users/login" component={Login} /> 
           <Route exact path="/users/register" component={Register} />
           <Route exact path="/jobboard" component={Jobs} />
-          {/* <Route exact path="/about" component={About} />  */}
+          <Route exact path="/about" component={AboutUs} /> 
           <Route exact path="/createjob" component={AddJob} /> 
           <Route exact path="/map" component={Map} /> 
   
