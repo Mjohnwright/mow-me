@@ -14,7 +14,7 @@ class CreateJob extends Component {
     jobChosen: false
   };
 
-  handleCreateJobInInputChange = event => {
+  handleInputChange = event => {
     const { name, value } = event.target;
 
     // Updating the input's state
@@ -23,39 +23,39 @@ class CreateJob extends Component {
     });
   };
 
-  handleCreateJobValidate = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-    console.log("validate Register is fired");
-    // Set of conditions to validate a New User's data
-    if (this.state.username === "") {
-      alert("Please provide your User Name");
-      return false;
-    } else if (this.state.streetAddress === "") {
-      alert("Please provide your street address");
-      return false;
-    } else if (this.state.city === "") {
-      alert("Please provide your city");
-      return false;
-    } else if (this.state.state === "") {
-      alert("Please provide your state");
-      return false;
-    } else if (this.state.zipCode === "") {
-      alert("Please provide your zip code");
-      return false;
-    } else if (this.state.price === "") {
-      alert("Please select your price");
-      return false;
-    } else if (this.state.dateNeededBy === "") {
-      alert("Please select a date");
-      return false;
-    }
+  // handleCreateJobValidate = event => {
+  //   // Preventing the default behavior of the form submit (which is to refresh the page)
+  //   event.preventDefault();
+  //   console.log("validate Register is fired");
+  //   // Set of conditions to validate a New User's data
+  //   if (this.state.username === "") {
+  //     alert("Please provide your User Name");
+  //     return false;
+  //   } else if (this.state.streetAddress === "") {
+  //     alert("Please provide your street address");
+  //     return false;
+  //   } else if (this.state.city === "") {
+  //     alert("Please provide your city");
+  //     return false;
+  //   } else if (this.state.state === "") {
+  //     alert("Please provide your state");
+  //     return false;
+  //   } else if (this.state.zipCode === "") {
+  //     alert("Please provide your zip code");
+  //     return false;
+  //   } else if (this.state.price === "") {
+  //     alert("Please select your price");
+  //     return false;
+  //   } else if (this.state.dateNeededBy === "") {
+  //     alert("Please select a date");
+  //     return false;
+  //   }
 
-    this.handleCreateJobSubmit(event);
-  };
+  //   this.handleCreateJobSubmit(event);
+  // };
 
   handleCreateJobSubmit = event => {
-    console.log("POST is fired");
+    console.log("Create job POST is fired");
     
     axios
       .post("/api/jobs/", {
@@ -106,7 +106,7 @@ class CreateJob extends Component {
                   type="text"
                   value={this.state.username}
                   name="username"
-                  onChange={this.handleCreateJobInInputChange}
+                  onChange={this.handleInputChange}
                 />
               </div>
 
@@ -116,7 +116,7 @@ class CreateJob extends Component {
                   type="text"
                   value={this.state.streetAddress}
                   name="streetAddress"
-                  onChange={this.handleCreateJobInInputChange}
+                  onChange={this.handleInputChange}
                 />
               </div>
 
@@ -126,7 +126,7 @@ class CreateJob extends Component {
                   type="text"
                   value={this.state.city}
                   name="city"
-                  onChange={this.handleCreateJobInInputChange}
+                  onChange={this.handleInputChange}
                 />
               </div>
 
@@ -136,7 +136,7 @@ class CreateJob extends Component {
                   type="state"
                   value={this.state.state}
                   name="state"
-                  onChange={this.handleCreateJobInInputChange}
+                  onChange={this.handleInputChange}
                 />
               </div>
 
@@ -146,7 +146,7 @@ class CreateJob extends Component {
                   type="text"
                   value={this.state.zipCode}
                   name="zipCode"
-                  onChange={this.handleCreateJobInInputChange}
+                  onChange={this.handleInputChange}
                 />
               </div>
 
@@ -156,7 +156,7 @@ class CreateJob extends Component {
                   type="text"
                   value={this.state.price}
                   name="price"
-                  onChange={this.handleCreateJobInInputChange}
+                  onChange={this.handleInputChange}
                 />
               </div>
 
@@ -166,7 +166,7 @@ class CreateJob extends Component {
                   type="date"
                   value={this.state.dateNeededBy}
                   name="dateNeededBy"
-                  onChange={this.handleCreateJobInInputChange}
+                  onChange={this.handleInputChange}
                 />
               </div>
 
@@ -174,7 +174,7 @@ class CreateJob extends Component {
                 <button
                   className="ui button-create"
                   type="submit"
-                  onClick={this.handleCreateJobValidate}
+                  onClick={this.handleCreateJobSubmit}
                 >
                   Submit
                 </button>
