@@ -4,7 +4,7 @@ import axios from "axios";
 
 class AllJobs extends Component {
   state = {
-    jobs:[],
+    
     username: "",
     streetAddress: "",
     city: "",
@@ -27,13 +27,15 @@ class AllJobs extends Component {
       .get("/api/jobs/")
       .then(function(response) {
         console.log("FIRED");
+       
         console.log("this is the string" + JSON.stringify(response))
-        console.log("DATA!!!!!!!!!!!!!!!!" + response.data[0]);
-
-        let jobsArray= JSON.stringify(response.data[0])
-        console.log("jobsArray = " + jobsArray);
-        console.log(jobsArray.username);
-         this.setState({
+        
+        let data = response.data[0];
+       
+        console.log("data.username = " + data.username);
+         
+        
+        this.setState({
             username: "",
             streetAddress: "",
             city: "",
