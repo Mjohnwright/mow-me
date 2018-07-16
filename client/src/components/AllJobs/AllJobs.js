@@ -30,19 +30,19 @@ class AllJobs extends Component {
        
         console.log("this is the string" + JSON.stringify(response))
         
-        let data = response.data[0];
+        let data = response.data[0]; //BINGO!!!!!!!!!!!!!!
        
         console.log("data.username = " + data.username);
          
         
         this.setState({
-            username: "",
-            streetAddress: "",
-            city: "",
-            state: "",
-            zipCode: "",
-            price: "",
-            dateNeededBy: "",
+            username: "data.username",
+            streetAddress: "data.streetAddress",
+            city: "data.city",
+            state: "data.state",
+            zipCode: "data.zipCode",
+            price: "data.price",
+            dateNeededBy: "data.dateNeededBy",
             jobChosen: false
           });
         console.log(this.state.jobs)
@@ -61,15 +61,15 @@ class AllJobs extends Component {
         console.log(error);
       })
 
-    this.setState({
-      username: "",
-      streetAddress: "",
-      city: "",
-      state: "",
-      zipCode: "",
-      price: "",
-      dateNeededBy: ""
-    });
+    // this.setState({
+    //   username: "",
+    //   streetAddress: "",
+    //   city: "",
+    //   state: "",
+    //   zipCode: "",
+    //   price: "",
+    //   dateNeededBy: ""
+    // });
   
 };
 
@@ -80,24 +80,25 @@ class AllJobs extends Component {
  
   render() {
     return (
-
-      <div>
+<div>
   <thead id="tHead">
      <tr>
-             <th scope="col">User Name</th>
+      <th scope="col">UserName</th>
       <th scope="col">Street Address</th>
       <th scope="col">City</th>
       <th scope="col">State</th>
-       <th scope="col">Zip</th>
-       <th scope="col">Price</th>
-       <th scope="col">Cut Date</th>
-       <th scope="col">Accept Job</th>
+      <th scope="col">Zip</th>
+      <th scope="col">Price</th>
+      <th scope="col">Cut Date</th>
+      <th scope="col">Accept Job</th>
      </tr>
-     </thead>
-     <tbody id="tbody">
+     
+  </thead>
+     
+  <tbody id="tbody">
      <tr>
        <th scope="row"></th>
-       <td>userName</td>
+       <td> {this.state.username}</td>
        <td>streetAddress</td>
        <td>city</td>
        <td>state</td>
