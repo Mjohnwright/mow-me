@@ -37,19 +37,15 @@ class AllJobs extends Component {
          
         
         this.setState({
-            username: "",
-            streetAddress: "",
-            city: "",
-            state: "",
-            zipCode: "",
-            price: "",
-            dateNeededBy: "",
+            username: data.username,
+            streetAddress: data.streetAddress,
+            city: data.city,
+            state: data.state,
+            zipCode: data.zipCode,
+            price: data.price,
+            dateNeededBy: data.dateNeededBy,
             jobChosen: false
           });
-        console.log(this.state.jobs)
-        console.log(JSON.stringify(response["data"]));
-         let jobsTest = JSON.stringify(response["data"]);
-         console.log(jobsTest)
      
 
         for (let i= 0; i< JSON.stringify(response["data"].length); i++){
@@ -63,16 +59,7 @@ class AllJobs extends Component {
         console.log(error);
       })
 
-    this.setState({
-      username: "",
-      streetAddress: "",
-      city: "",
-      state: "",
-      zipCode: "",
-      price: "",
-      dateNeededBy: ""
-    });
-  
+ 
 };
 
 
@@ -100,7 +87,7 @@ class AllJobs extends Component {
   <tbody id="tbody">
     <tr>
        <th scope="row"></th>
-       <td>userName</td>
+       <td> {this.state.username} </td>
        <td>streetAddress</td>
        <td>city</td>
        <td>state</td>
