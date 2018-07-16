@@ -15,7 +15,7 @@ class AllJobs extends Component {
     jobChosen: false
   };
 
-  componentDidMount() {
+  componentDidMount() 
     this.loadJobs();
   }
 
@@ -49,6 +49,7 @@ class AllJobs extends Component {
         console.log(JSON.stringify(response["data"]));
          let jobsTest = JSON.stringify(response["data"]);
          console.log(jobsTest)
+     
 
         for (let i= 0; i< JSON.stringify(response["data"].length); i++){
           //jobs+= i
@@ -202,6 +203,100 @@ class AllJobs extends Component {
       //     </div>
       //   </div>
       // </div>
+
+      <div className="center">
+        <div className="jumbotron-create">
+        </div>
+        {/* <p>Hello {this.state.firstName} {this.state.lastName}</p> */}
+        <div className="transbox-create-bg">
+          <div className="transbox-create">
+            <form className="createJob-form">
+              <h3>Let's Create a Job</h3>
+
+              <div className="field-create">
+                <label>User Name</label>
+                <input className="input-create"
+                  type="text"
+                  value={this.state.username}
+                  name="username"
+                  onChange={this.handleCreateJobInInputChange}
+                />
+              </div>
+
+              <div className="field-create">
+                <label>Street Address</label>
+                <input className="input-create"
+                  type="text"
+                  value={this.state.streetAddress}
+                  name="streetAddress"
+                  onChange={this.handleCreateJobInInputChange}
+                />
+              </div>
+
+              <div className="field-create">
+                <label>City</label>
+                <input className="input-create"
+                  type="text"
+                  value={this.state.city}
+                  name="city"
+                  onChange={this.handleCreateJobInInputChange}
+                />
+              </div>
+
+              <div className="field-create">
+                <label>State</label>
+                <input className="input-create"
+                  type="state"
+                  value={this.state.state}
+                  name="state"
+                  onChange={this.handleCreateJobInInputChange}
+                />
+              </div>
+
+              <div className="field-create">
+                <label>Zip Code</label>
+                <input className="input-create"
+                  type="text"
+                  value={this.state.zipCode}
+                  name="zipCode"
+                  onChange={this.handleCreateJobInInputChange}
+                />
+              </div>
+
+              <div className="field-create">
+                <label>Price</label>
+                <input className="input-create"
+                  type="text"
+                  value={this.state.price}
+                  name="price"
+                  onChange={this.handleCreateJobInInputChange}
+                />
+              </div>
+
+              <div className="field-create">
+                <label>Cut Date</label>
+                <input className="input-create"
+                  type="date"
+                  value={this.state.dateNeededBy}
+                  name="dateNeededBy"
+                  onChange={this.handleCreateJobInInputChange}
+                />
+              </div>
+
+              {/* <div className="field-create">
+                <button
+                  className="ui button-create"
+                  type="submit"
+                  onClick={this.handleAllJobsLoad}
+                >
+                  Submit
+                </button>
+              </div> */}
+            </form>
+          </div>
+        </div>
+      </div>
+
     );
   }
   }
