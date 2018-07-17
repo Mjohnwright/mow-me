@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./CreateJob.css";
 import axios from "axios";
 
+
 class CreateJob extends Component {
   state = {
     username: "",
@@ -87,6 +88,9 @@ class CreateJob extends Component {
       price: "",
       dateNeededBy: ""
     });
+    
+
+
   };
 
   render() {

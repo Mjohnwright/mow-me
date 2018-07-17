@@ -26,7 +26,7 @@ const Nav = props => (
     <Link to="/createjob">Create Job</Link>
     </li>
     <li className="btn btn-outlined btn-success" {...window.location.pathname === "/jobboard" ? "active" : ""}>
-    <Link to="/jobboard"><strong>Job Board</strong></Link>
+    <Link to="/jobboard">Job Board</Link>
     </li>
     <li className="btn btn-outlined btn-success" {...window.location.pathname === "/users/register" ? "active" : ""}>
     <Link to="/users/register">Register</Link>
