@@ -131,6 +131,34 @@ const jobsSeed = [
     price:"100",
     dateNeededBy: new Date(Date.now())
   }
+  ,
+  {
+    username: "mann",
+    streetAddress: "222 street",
+    city:"phila",
+    state: "PA",
+    zipCode:"19148",
+    price:"100",
+    dateNeededBy: new Date(Date.now())
+  },
+  {
+    username: "mann",
+    streetAddress: "222 street",
+    city:"phila",
+    state: "PA",
+    zipCode:"19148",
+    price:"100",
+    dateNeededBy: new Date(Date.now())
+  },
+  {
+    username: "mann",
+    streetAddress: "222 street",
+    city:"phila",
+    state: "PA",
+    zipCode:"19148",
+    price:"100",
+    dateNeededBy: new Date(Date.now())
+  }
  ];
 
 seedDb = () => {
