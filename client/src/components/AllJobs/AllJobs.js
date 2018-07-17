@@ -76,10 +76,12 @@ class AllJobs extends Component {
                   <th>Zip</th>
                   <th>Price</th>
                   <th>Date Needed by</th>
+                  <th>CLAIM</th>
+
                 </tr>
                 {this.state.allJobs.map(job => (
 
-                  <tr>
+                   <tr>
                     <td>{job.username}</td>
                     <td>{job.streetAddress}</td>
                     <td>{job.city}</td>
@@ -87,6 +89,8 @@ class AllJobs extends Component {
                     <td>{job.zipCode}</td>
                     <td>{job.price}</td>
                     <td>{job.dateNeededBy}</td>
+                    <button>CLAIM</button>
+
                   </tr>
 
 
