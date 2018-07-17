@@ -1,7 +1,7 @@
 
 body {
     background-color: none;
-    /* background-image: url(../src/images/main.png); */
+    background-image: url(../src/images/main2.png);
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -35,6 +35,23 @@ h1.display-4 {
 
 p.lead {
     color: orange;
+}
+
+a.navbar-brand {
+    color: white;
+}
+
+p {
+    color: yellow;
+    text-align: center;
+}
+
+p.lead {
+    background-color: none;
+}
+
+nav {
+    align-content: center;
 }
 
 a.navbar-brand {
