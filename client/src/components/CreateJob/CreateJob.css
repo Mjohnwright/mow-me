@@ -10,7 +10,7 @@
   background-color: #1e6f41;
   width: 350px;
   height: 525px;
-  margin-left:350px;
+  margin-left:650px;
   opacity: .6;
 }
 div.transbox-create{
@@ -18,7 +18,7 @@ div.transbox-create{
   background-color: none;
   width: 400px;
   height: 400px;
-  margin-left:340px;
+  margin-left:650px;
 }
 .button-create {
   width: 50%;

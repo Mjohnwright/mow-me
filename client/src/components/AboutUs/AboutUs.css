@@ -1,3 +1,5 @@
+
+
 .at-section__title {
     margin: 0 0 70px;
     color: #000;
@@ -184,7 +186,7 @@
     display: block;
   }
   .at-social__item svg {
-    fill: #313435;
+    fill: #f9fbfc;
     display: block;
     height: 50px;
     -webkit-transition: fill 0.2s ease;
@@ -199,6 +201,7 @@
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(54, 54, 65, 0.5)
   }
   
   .container {
@@ -216,7 +219,10 @@
   }
   h2{
     color: white;
-   
-
+    text-align: center;
+    position: absolute;
+    left: 700px;
+    top: -75px;
+    background-color: rgba(54, 54, 65, 0.5)
   }
   
