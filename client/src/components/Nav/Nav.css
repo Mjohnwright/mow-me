@@ -6,13 +6,16 @@
 
 
 .btn-outlined.btn-success {
-    background: #fbff48;
+    background: #20720d;
     font-weight: bold;
     border-radius: 10px;
     margin: 10px;
-}
-.btn-outlined.btn-success a:hover {
+    border: none;
+  }
+.btn-outlined.btn-success:hover {
     text-decoration: none;
+    background-color:#fbff48;
+
 };
     
 .btn-outlined.btn-success:active {
@@ -20,6 +23,13 @@
     color: #FFF;
     background: #47a447;
 }
+a{
+    color:#fbff48;
+}
+a:hover{
+    color:#20720d;
+}
+
 
 
 
