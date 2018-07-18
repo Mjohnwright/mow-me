@@ -93,6 +93,7 @@ class AllJobs extends Component {
                 {this.state.allJobs.map(job => (
 
                    <tr>
+
                     <td className="tdata">{job.username}</td>
                     <td className="tdata">{job.streetAddress}</td>
                     <td className="tdata">{job.city}</td>
@@ -102,6 +103,7 @@ class AllJobs extends Component {
                     <td className="tdata">{job.dateNeededBy}</td>
                     {/* <button onClick={() => handleJobDelete(job.id)} className="btn btn-primary">CLAIM</button> */}
                     <td className="btn btn-primary">CLAIM</td>
+
                   </tr>
 
 
