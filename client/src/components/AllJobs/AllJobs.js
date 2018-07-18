@@ -13,10 +13,10 @@ class AllJobs extends Component {
   }
 
 
-//   handleJobDelete = id => {
-//     axios
-// .delete("/api/jobs/", id).then(res => this.loadJobs());
-//   };
+  handleJobDelete = id => {
+    axios
+.delete("/api/jobs/", {id:id}).then(res => this.loadJobs());
+  };
  
 
 
@@ -76,12 +76,12 @@ class AllJobs extends Component {
         <div className="transbox-alljobs-bg">
           <div className="transbox-alljobs">
             <table className="table-alljobs">
-            <h3>Let's Create a Job</h3>
+            <h4>Current Jobs Available</h4>
               <tbody>
                 <tr>
 
-                  <th className="thead">User Name</th>
-                  <th className="thead">Street Address</th>
+                  <th className="thead">Customer Name</th>
+                  <th className="thead">Job Address</th>
                   <th className="thead">City</th>
                   <th className="thead">State</th>
                   <th className="thead">Zip</th>
@@ -93,15 +93,15 @@ class AllJobs extends Component {
                 {this.state.allJobs.map(job => (
 
                    <tr>
-                    <td>{job.username}</td>
-                    <td>{job.streetAddress}</td>
-                    <td>{job.city}</td>
-                    <td>{job.state}</td>
-                    <td>{job.zipCode}</td>
-                    <td>{job.price}</td>
-                    <td>{job.dateNeededBy}</td>
-                    {/* <button onClick={() => handleJobDelete(this.username.id)} className="btn btn-primary">CLAIM</button> */}
-
+                    <td className="tdata">{job.username}</td>
+                    <td className="tdata">{job.streetAddress}</td>
+                    <td className="tdata">{job.city}</td>
+                    <td className="tdata">{job.state}</td>
+                    <td className="tdata">{job.zipCode}</td>
+                    <td className="tdata">{job.price}</td>
+                    <td className="tdata">{job.dateNeededBy}</td>
+                    {/* <button onClick={() => handleJobDelete(job.id)} className="btn btn-primary">CLAIM</button> */}
+                    <td className="btn btn-primary">CLAIM</td>
                   </tr>
 
 
