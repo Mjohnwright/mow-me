@@ -14,7 +14,7 @@ const About  = () => (
         < Nav />
         <Container style={{ marginTop: 30 }}>
       <Row>
-        <Col size="md-6">
+        <Col size="md-12">
           <h2><center><strong>Meet Our Developers</strong></center></h2>
         </Col>
       </Row>
