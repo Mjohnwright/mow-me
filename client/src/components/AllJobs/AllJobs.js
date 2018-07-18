@@ -75,8 +75,8 @@ class AllJobs extends Component {
         </div>
         <div className="transbox-alljobs-bg">
           <div className="transbox-alljobs">
-            <table className="table-alljobs">
-            <h4>Current Jobs Available</h4>
+            <table className="table table-bordered">
+            <h4><strong>Current Jobs Available</strong></h4>
               <tbody>
                 <tr>
 
@@ -102,7 +102,7 @@ class AllJobs extends Component {
                     <td className="tdata">{job.price}</td>
                     <td className="tdata">{job.dateNeededBy}</td>
                     {/* <button onClick={() => handleJobDelete(job.id)} className="btn btn-primary">CLAIM</button> */}
-                    <td className="btn btn-primary">CLAIM</td>
+                    <td className="btn btn-primary"><strong>CLAIM</strong></td>
 
                   </tr>
 
