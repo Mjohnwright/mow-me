@@ -1,11 +1,11 @@
 .table-alljobs {
-color:black;
+color:white;
 }
-.input-alljobs {
-    background-color:white;
-    color:black;
-    margin-left: 20px;
-    border-radius: 6px;
+.thead {
+    color:white;
+    margin:auto;
+
+   
   }
   .jumbotron-alljobs{
     position:absolute;

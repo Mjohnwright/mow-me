@@ -76,17 +76,18 @@ class AllJobs extends Component {
         <div className="transbox-alljobs-bg">
           <div className="transbox-alljobs">
             <table className="table-alljobs">
+            <h3>Let's Create a Job</h3>
               <tbody>
                 <tr>
 
-                  <th>User Name</th>
-                  <th>Street Address</th>
-                  <th>City</th>
-                  <th>State</th>
-                  <th>Zip</th>
-                  <th>Price</th>
-                  <th>Date Needed by</th>
-                  <th>CLAIM</th>
+                  <th className="thead">User Name</th>
+                  <th className="thead">Street Address</th>
+                  <th className="thead">City</th>
+                  <th className="thead">State</th>
+                  <th className="thead">Zip</th>
+                  <th className="thead">Price</th>
+                  <th className="thead">Date Needed by</th>
+                  <th className="thead">CLAIM</th>
 
                 </tr>
                 {this.state.allJobs.map(job => (
