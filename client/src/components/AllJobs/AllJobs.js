@@ -71,11 +71,11 @@ class AllJobs extends Component {
     return (
 
       <div className="center">
-        <div className="jumbotron-create">
+        <div className="jumbotron-alljobs">
         </div>
-        <div className="transbox-create-bg">
-          <div className="transbox-create">
-            <table>
+        <div className="transbox-alljobs-bg">
+          <div className="transbox-alljobs">
+            <table className="table-alljobs">
               <tbody>
                 <tr>
 
