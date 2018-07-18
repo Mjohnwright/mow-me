@@ -18,7 +18,9 @@ class AllJobs extends Component {
 .delete("/api/jobs/", {id:id}).then(res => this.loadJobs());
   };
  
-
+  // componentDidMount() {
+  //  
+  // }
 
 
 
@@ -55,7 +57,8 @@ class AllJobs extends Component {
         });
 
         console.log(this.state.allJobs)
-        console.log(this.state.allJobs[0].city)
+        //can get the job id with this following line but //not on line 71
+        console.log(this.state.allJobs[0]._id)
         // console.log(this.state.streetAddress)
         // console.log(this.state.username)
 
@@ -65,7 +68,7 @@ class AllJobs extends Component {
       .catch(function (error) {
         console.log(error);
       })
-
+      //this.handleJobDelete(this.state.allJobs[0]._id)
   };
   render() {
     return (
@@ -101,7 +104,8 @@ class AllJobs extends Component {
                     <td className="tdata">{job.zipCode}</td>
                     <td className="tdata">{job.price}</td>
                     <td className="tdata">{job.dateNeededBy}</td>
-                    {/* <button onClick={() => handleJobDelete(job.id)} className="btn btn-primary">CLAIM</button> */}
+                    {/* <td className="tdata">{job._id}</td> */}
+                    {/* <button onClick={() => handleJobDelete(job._id)} className="btn btn-primary">CLAIM</button> */}
                     <td className="btn btn-primary"><strong>CLAIM</strong></td>
 
                   </tr>
