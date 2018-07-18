@@ -13,6 +13,16 @@ class AllJobs extends Component {
   }
 
 
+//   handleJobDelete = id => {
+//     axios
+// .delete("/api/jobs/", id).then(res => this.loadJobs());
+//   };
+ 
+
+
+
+
+
   loadJobs = event => {
     console.log("Get is fired");
 
@@ -89,7 +99,7 @@ class AllJobs extends Component {
                     <td>{job.zipCode}</td>
                     <td>{job.price}</td>
                     <td>{job.dateNeededBy}</td>
-                    <button>CLAIM</button>
+                    {/* <button onClick={() => handleJobDelete(this.username.id)} className="btn btn-primary">CLAIM</button> */}
 
                   </tr>
 
