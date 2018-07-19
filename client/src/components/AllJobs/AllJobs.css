@@ -23,14 +23,14 @@ font-weight: bolder;
   height: 350px;
   margin-left:300px;
   opacity: .6;
-  border:4px solid white;
+  /* border:4px solid white; */
 
 }
 div.transbox-alljobs{
   position: absolute;
 
   width: 900px;
-  height: 350px;
+  height: 900px;
   margin-left:300px;
   border:4px solid white;
   overflow: scroll;
