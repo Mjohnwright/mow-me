@@ -14,15 +14,15 @@ class AllJobs extends Component {
   }
 
 
-  handleJobDelete = id => {
-    axios
-.delete("/api/jobs/"+ id).then( this.loadJobs());
-  };
+handleJobDelete = id => {
+  axios
+    .delete("/api/jobs/"+ id)
+    .then( this.loadJobs());
+};
  
   // componentDidMount() {
   //  
   // }
-
 
 
 
@@ -94,7 +94,8 @@ class AllJobs extends Component {
                   <th className="thead">CLAIM</th>
 
                 </tr>
-                {this.state.allJobs.map(job => (
+                
+              {this.state.allJobs.map(job => (
 
                    <tr>
 
