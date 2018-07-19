@@ -49,7 +49,10 @@ body{
   color:white;
 }
 
-  
+.table, h4 {
+  text-align: center;
+}
+ 
   
 
   
