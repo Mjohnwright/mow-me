@@ -28,12 +28,12 @@ font-weight: bolder;
 }
 div.transbox-alljobs{
   position: absolute;
-  /* background-color: none; */
+
   width: 900px;
   height: 350px;
   margin-left:300px;
   border:4px solid white;
-
+  overflow: scroll;
 }
 
 .btn-primary{
