@@ -151,7 +151,7 @@ const jobsSeed = [
     dateNeededBy: new Date(Date.now())
   },
   {
-    username: "mike",
+    username: "matt",
     streetAddress: "222 street",
     city:"phila",
     state: "PA",
