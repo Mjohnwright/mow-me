@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./AllJobs.css";
 import axios from "axios";
 // import "./JobBoard.js";
+import formatDate from "./formatDate";
 
 class AllJobs extends Component {
   state = {
@@ -103,9 +104,7 @@ class AllJobs extends Component {
                     <td className="tdata">{job.state}</td>
                     <td className="tdata">{job.zipCode}</td>
                     <td className="tdata">{job.price}</td>
-                    <td className="tdata">{job.dateNeededBy}</td>
-                    {/* <td className="tdata">{job._id}</td> */}
-                    {/* <button onClick={() => this.handleJobDelete(job._id)} className="btn btn-primary">CLAIM</button> */}
+                    <td className="tdata">{formatDate(job.dateNeededBy)}</td>
                     <td className="btn btn-primary"onClick={() => this.handleJobDelete(job._id)} ><strong>CLAIM</strong></td>
                  
                   </tr>
