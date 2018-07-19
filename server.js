@@ -123,7 +123,7 @@ const jobsSeed = [
     dateNeededBy: new Date(Date.now())
   },
   {
-    username: "mann",
+    username: "matt",
     streetAddress: "222 street",
     city:"phila",
     state: "PA",
@@ -133,7 +133,16 @@ const jobsSeed = [
   }
   ,
   {
-    username: "mann",
+    username: "joe",
+    streetAddress: "333 street",
+    city:"phila",
+    state: "PA",
+    zipCode:"19148",
+    price:"100",
+    dateNeededBy: new Date(Date.now())
+  },
+  {
+    username: "dirk",
     streetAddress: "222 street",
     city:"phila",
     state: "PA",
@@ -142,16 +151,7 @@ const jobsSeed = [
     dateNeededBy: new Date(Date.now())
   },
   {
-    username: "mann",
-    streetAddress: "222 street",
-    city:"phila",
-    state: "PA",
-    zipCode:"19148",
-    price:"100",
-    dateNeededBy: new Date(Date.now())
-  },
-  {
-    username: "mann",
+    username: "mike",
     streetAddress: "222 street",
     city:"phila",
     state: "PA",
