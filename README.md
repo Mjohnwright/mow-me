@@ -14,4 +14,6 @@ Mow-Me has following features:
 <!-- * <strong>[Burger! Burger! Burger!](https://ancient-reef-11912.herokuapp.com/)</strong> -->
 
 ### Screenshot
-![Full Size](src/images/main1.png)
+
+![Full Size](client/src/images/main2.png)
+
